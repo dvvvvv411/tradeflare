@@ -9,25 +9,29 @@ const steps = [
     icon: UserPlus,
     number: '01',
     title: 'Kostenlos anmelden',
-    description: 'Erstelle in 2 Minuten dein Konto. Keine Kreditkarte erforderlich.',
+    description: 'Erstelle in nur 2 Minuten dein Konto. Komplett kostenlos, keine Kreditkarte.',
+    highlight: '2 Min',
   },
   {
     icon: Wallet,
     number: '02',
-    title: 'Exchange verbinden',
-    description: 'Verbinde deine Krypto-Exchange (Binance, Kraken, etc.). Dein Kapital bleibt bei dir.',
+    title: 'Geld einzahlen',
+    description: 'Per Krypto oder Banküberweisung. Starte bereits ab 200€.',
+    highlight: 'Ab 200€',
   },
   {
     icon: Bot,
     number: '03',
-    title: 'KI aktivieren',
-    description: 'Die KI beginnt sofort mit der Analyse von Bitcoin, Ethereum & Altcoins.',
+    title: 'Trading Bot aktivieren',
+    description: 'Mit einem Klick startet die KI und tradet automatisch für dich.',
+    highlight: '1 Klick',
   },
   {
     icon: TrendingUp,
     number: '04',
-    title: 'Ergebnisse verfolgen',
-    description: 'Beobachte in Echtzeit, wie die KI für dich Krypto tradet – 24/7.',
+    title: 'Geld verdienen',
+    description: 'Lehne dich zurück und beobachte, wie dein Kapital 24/7 arbeitet.',
+    highlight: '24/7',
   },
 ];
 
@@ -66,18 +70,18 @@ export function HowItWorksSection() {
             Einfach starten
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            In 4 Schritten zum{' '}
-            <span className="text-primary">automatisierten Krypto-Trading</span>
+            In 4 einfachen Schritten zum{' '}
+            <span className="text-primary">passiven Einkommen</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Keine technischen Vorkenntnisse nötig. In wenigen Minuten ist dein Bot startklar.
+            So einfach war Krypto-Trading noch nie. Starte in wenigen Minuten.
           </p>
         </div>
 
         {/* Steps */}
         <div className="relative mb-20">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2" />
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
@@ -103,7 +107,10 @@ export function HowItWorksSection() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <span className="inline-block px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-3">
+                      {step.highlight}
+                    </span>
                     <p className="text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
