@@ -41,26 +41,26 @@ export function HeaderSection() {
       }`}
     >
       <div className={`${isScrolled ? 'px-4 sm:px-6' : 'container-custom'}`}>
-        <div className="grid lg:grid-cols-[1.2fr_1fr] items-center h-16 md:h-20">
-          {/* Left Column: Logo + Nav */}
-          <div className="flex items-center gap-8">
+        <div className="grid lg:grid-cols-3 items-center h-16 md:h-20">
+          {/* Left Column: Logo */}
+          <div className="flex items-center">
             <a href="/" className="text-xl md:text-2xl font-bold text-foreground">
               CryptoAI
             </a>
-
-            {/* Desktop Navigation - Modern Pill Style */}
-            <nav className="hidden md:flex items-center gap-1 bg-muted/50 backdrop-blur-sm rounded-full p-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 rounded-full transition-all duration-200"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </nav>
           </div>
+
+          {/* Middle Column: Navigation CENTERED */}
+          <nav className="hidden lg:flex items-center justify-center gap-2">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground hover:bg-primary/10 rounded-full transition-all duration-200"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
 
           {/* Right Column: CTA Button aligned to end */}
           <div className="hidden lg:flex justify-end">
