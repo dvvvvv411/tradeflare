@@ -1,4 +1,4 @@
-import { Users, ArrowRight, Lock } from 'lucide-react';
+import { Users, ArrowRight, Lock, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useCountUp } from '@/hooks/useCountUp';
@@ -27,17 +27,18 @@ export function UrgencyCtaSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+          {/* Left Side - Urgency Content in White Card */}
           {/* Left Side - Urgency Content in White Card */}
           <div
             ref={leftRef}
-            className={`transition-all duration-700 ${
+            className={`h-full transition-all duration-700 ${
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
-              {/* Headline - komplett blau */}
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-primary">
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-xl h-full flex flex-col">
+              {/* Headline - komplett blau, kleinere Font Size */}
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-primary">
                 Limitierte Plätze verfügbar
               </h2>
 
@@ -47,42 +48,45 @@ export function UrgencyCtaSection() {
                 um optimale Performance für alle Nutzer zu gewährleisten.
               </p>
 
-              {/* Active Users Stat */}
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-2.5 rounded-xl border border-border mb-6 w-fit">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="font-bold">{activeUsers}+</span>
-                <span className="text-muted-foreground text-sm">aktive Nutzer</span>
+              {/* Active Users Stat - dezenter */}
+              <div className="flex items-center gap-2 text-muted-foreground text-sm mb-6">
+                <Users className="w-4 h-4 text-primary/60" />
+                <span className="font-medium text-foreground">{activeUsers}+</span>
+                <span>aktive Nutzer</span>
               </div>
 
-              {/* Progress Bar für verfügbare Plätze */}
+              {/* Progress Bar für verfügbare Plätze - nur blau */}
               <div className="mb-6">
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-muted-foreground">Verfügbare Plätze heute</span>
-                  <span className="font-bold text-destructive">Noch {spotsRemaining} von {totalSpots}</span>
+                  <span className="font-bold text-primary">Unter 20</span>
                 </div>
                 <div className="w-full h-3 bg-muted rounded-full overflow-hidden">
                   <div 
-                    className="h-full bg-gradient-to-r from-primary to-destructive rounded-full transition-all duration-1000"
+                    className="h-full bg-primary rounded-full transition-all duration-1000"
                     style={{ width: leftVisible ? `${progressPercentage}%` : '0%' }}
                   />
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">{Math.round(progressPercentage)}% der täglichen Plätze bereits vergeben</p>
               </div>
 
-              {/* Info Box - Blau statt Gelb */}
+              {/* Info Box - Blau mit Warnung-Icon */}
               <div className="bg-primary/10 border border-primary/20 rounded-xl p-5 mb-8">
-                <p className="text-sm text-primary leading-relaxed">
-                  <strong className="font-semibold">Wichtig:</strong> Um die Qualität unserer KI-Prognosen und optimale 
-                  Performance für alle Nutzer zu gewährleisten, begrenzen wir die täglichen 
-                  Neuanmeldungen auf 200. Sobald alle Plätze vergeben sind, schließt die 
-                  Registrierung für heute.
-                </p>
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-primary leading-relaxed">
+                    <strong className="font-semibold">Wichtig:</strong> Um die Qualität unserer KI-Prognosen und optimale 
+                    Performance für alle Nutzer zu gewährleisten, begrenzen wir die täglichen 
+                    Neuanmeldungen auf 200. Sobald alle Plätze vergeben sind, schließt die 
+                    Registrierung für heute.
+                  </p>
+                </div>
               </div>
 
-              {/* CTA Button - Full Width */}
+              {/* CTA Button - Full Width, mt-auto für gleiche Höhe */}
               <Button 
                 size="lg"
-                className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground py-7 text-xl font-bold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 animate-pulse-glow"
+                className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground py-7 text-xl font-bold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 animate-pulse-glow mt-auto"
                 asChild
               >
                 <a href="#register">
@@ -96,7 +100,7 @@ export function UrgencyCtaSection() {
           {/* Right Side - Why We Limit (Transparent, no card) */}
           <div
             ref={rightRef}
-            className={`transition-all duration-700 delay-200 ${
+            className={`h-full flex flex-col justify-between transition-all duration-700 delay-200 ${
               rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`}
           >
