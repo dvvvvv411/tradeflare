@@ -1,10 +1,6 @@
 import { HeaderSection } from '@/components/landing/HeaderSection';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { UrgencyCtaSection } from '@/components/landing/UrgencyCtaSection';
-import { ProblemSolutionSection } from '@/components/landing/ProblemSolutionSection';
-import { HowItWorksSection } from '@/components/landing/HowItWorksSection';
-import { ScarcitySection } from '@/components/landing/ScarcitySection';
-import { FAQSection } from '@/components/landing/FAQSection';
 import { FooterSection } from '@/components/landing/FooterSection';
 
 const Index = () => {
@@ -14,10 +10,6 @@ const Index = () => {
       <main className="min-h-screen">
         <HeroSection />
         <UrgencyCtaSection />
-        <HowItWorksSection />
-        <ProblemSolutionSection />
-        <ScarcitySection />
-        <FAQSection />
         <FooterSection />
       </main>
     </>
