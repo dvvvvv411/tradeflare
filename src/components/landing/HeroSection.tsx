@@ -1,7 +1,7 @@
 import { useCountUp } from '@/hooks/useCountUp';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, TrendingUp, Zap, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, TrendingUp, ArrowUpRight } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 
 const REGISTER_URL = '#register';
@@ -103,90 +103,65 @@ export function HeroSection() {
 
       <div ref={ref} className="container-custom relative z-10 py-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
+          {/* Left Content - Professional & Confident */}
           <div className="text-center lg:text-left space-y-8">
-            {/* Badge */}
-            <div 
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-sm font-medium transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
-            >
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              <span className="text-muted-foreground">
-                Bitcoin, Ethereum, Solana & mehr
-              </span>
-            </div>
-
-            {/* Main Headline */}
+            {/* Main Headline - Dominant */}
             <h1 
-              className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${
+              className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Krypto-Trading.{' '}
-              <span className="text-primary">Automatisiert.</span>
+              <span className="font-light">Algorithmisches</span>
               <br />
-              24/7 für dich aktiv.
+              <span className="text-primary">Krypto-Trading.</span>
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline - Concise & Professional */}
             <p 
-              className={`text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 transition-all duration-700 delay-200 ${
+              className={`text-lg sm:text-xl text-muted-foreground max-w-md mx-auto lg:mx-0 leading-relaxed transition-all duration-700 delay-100 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Unsere KI analysiert Bitcoin, Ethereum und Altcoins in Echtzeit – 
-              und handelt professionell für dich. Keine Emotionen. Keine verpassten Chancen.
+              Professionelle Handelsalgorithmen. Vollautomatisiert. 
+              Rund um die Uhr im Krypto-Markt aktiv.
             </p>
 
-            {/* CTAs */}
+            {/* CTAs - Clean & Serious */}
             <div 
-              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-700 delay-300 ${
+              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-700 delay-200 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
               <Button 
                 size="lg" 
-                className="group bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-6 text-lg font-semibold rounded-xl glow-primary hover-lift"
+                className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-medium rounded-xl"
                 onClick={() => window.location.href = REGISTER_URL}
               >
                 <span className="flex items-center gap-2">
-                  Jetzt kostenlos starten
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  Portfolio starten
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
               
               <Button 
                 size="lg" 
-                variant="outline"
-                className="group bg-white hover:bg-muted/50 px-8 py-6 text-lg font-semibold rounded-xl hover-lift border-border"
+                variant="ghost"
+                className="text-muted-foreground hover:text-foreground px-8 py-6 text-base font-medium"
                 onClick={() => document.getElementById('funktionen')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Mehr erfahren
+                So funktioniert's
               </Button>
             </div>
 
-            {/* Trust Indicators */}
+            {/* Mini Stats - Subtle & Factual */}
             <div 
-              className={`flex flex-wrap gap-6 justify-center lg:justify-start pt-4 transition-all duration-700 delay-400 ${
+              className={`flex flex-wrap gap-8 justify-center lg:justify-start pt-4 text-sm text-muted-foreground transition-all duration-700 delay-300 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-primary" />
-                <span>SSL-verschlüsselt</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <TrendingUp className="w-4 h-4 text-primary" />
-                <span>24/7 Trading</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Zap className="w-4 h-4 text-primary" />
-                <span>Ab 200€ starten</span>
-              </div>
+              <span className="tabular-nums">87% Erfolgsrate</span>
+              <span>24/7 aktiv</span>
+              <span>Ab €200</span>
             </div>
           </div>
 
