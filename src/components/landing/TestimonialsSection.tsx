@@ -78,6 +78,7 @@ export const TestimonialsSection = () => {
 
   return (
     <section 
+      id="erfahrungen"
       ref={ref}
       className="relative py-20 lg:py-28 bg-gradient-to-b from-background to-transparent overflow-hidden"
     >

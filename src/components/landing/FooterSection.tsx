@@ -11,10 +11,9 @@ const scrollToSection = (sectionId: string) => {
 };
 
 const navigationLinks = [
-  { label: 'Funktionen', href: '#funktionen' },
-  { label: 'Vorteile', href: '#vorteile' },
-  { label: 'Erfahrungen', href: '#testimonials' },
-  { label: 'Kontakt', href: '#kontakt' },
+  { label: 'Trading Bot', href: '#trading-bot' },
+  { label: 'Erfahrungen', href: '#erfahrungen' },
+  { label: 'Exklusiver Zugang', href: '#exklusiver-zugang' },
 ];
 
 const productLinks = [
@@ -36,7 +35,7 @@ export function FooterSection() {
   return (
     <>
       {/* Final CTA */}
-      <section id="kontakt" className="section-padding relative overflow-hidden">
+      <section id="exklusiver-zugang" className="section-padding relative overflow-hidden">
         {/* Fließender Gradient von oben (transparent) nach unten (primary) */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/4 to-primary/10" />
         
