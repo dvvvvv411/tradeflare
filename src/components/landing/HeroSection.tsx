@@ -127,7 +127,7 @@ export function HeroSection() {
               }`}
             >
               <span className="font-light lg:block">KI-gestütztes Trading</span>{' '}
-              <span className="text-gradient-blue-shimmer lg:block">für digitale Assets</span>
+              <span className="text-gradient-blue-shimmer lg:block pb-1">für digitale Assets</span>
             </h1>
 
             {/* Subheadline - Consumer-friendly */}
