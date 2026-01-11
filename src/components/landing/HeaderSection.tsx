@@ -34,34 +34,36 @@ export function HeaderSection() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-border shadow-sm'
+          ? 'bg-white/90 backdrop-blur-xl border border-border shadow-sm rounded-2xl mx-4 sm:mx-6 lg:mx-8'
           : 'bg-transparent'
       }`}
     >
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="/" className="text-xl md:text-2xl font-bold text-foreground">
-            CryptoAI
-          </a>
+      <div className={`${isScrolled ? 'px-4 sm:px-6' : 'container-custom'}`}>
+        <div className="grid lg:grid-cols-[1.2fr_1fr] items-center h-16 md:h-20">
+          {/* Left Column: Logo + Nav */}
+          <div className="flex items-center gap-8">
+            <a href="/" className="text-xl md:text-2xl font-bold text-foreground">
+              CryptoAI
+            </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
+            {/* Desktop Navigation - Modern Pill Style */}
+            <nav className="hidden md:flex items-center gap-1 bg-muted/50 backdrop-blur-sm rounded-full p-1">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 rounded-full transition-all duration-200"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Right Column: CTA Button aligned to end */}
+          <div className="hidden lg:flex justify-end">
             <Button
               onClick={() => window.location.href = REGISTER_URL}
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6"
@@ -72,7 +74,7 @@ export function HeaderSection() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground ml-auto"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
