@@ -79,7 +79,7 @@ export const TestimonialsSection = () => {
   return (
     <section 
       ref={ref}
-      className="relative py-20 lg:py-28 bg-gradient-to-b from-background to-primary/5 overflow-hidden"
+      className="relative py-20 lg:py-28 bg-gradient-to-b from-background via-transparent to-primary/3 overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid opacity-30" />
