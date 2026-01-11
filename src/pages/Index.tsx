@@ -1,5 +1,6 @@
 import { HeaderSection } from '@/components/landing/HeaderSection';
 import { HeroSection } from '@/components/landing/HeroSection';
+import { UrgencyCtaSection } from '@/components/landing/UrgencyCtaSection';
 import { ProblemSolutionSection } from '@/components/landing/ProblemSolutionSection';
 import { HowItWorksSection } from '@/components/landing/HowItWorksSection';
 import { ScarcitySection } from '@/components/landing/ScarcitySection';
@@ -12,6 +13,7 @@ const Index = () => {
       <HeaderSection />
       <main className="min-h-screen">
         <HeroSection />
+        <UrgencyCtaSection />
         <HowItWorksSection />
         <ProblemSolutionSection />
         <ScarcitySection />
