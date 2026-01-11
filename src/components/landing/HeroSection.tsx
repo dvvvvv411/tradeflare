@@ -190,29 +190,31 @@ export function HeroSection() {
 
             {/* Partner Logos */}
             <div 
-              className={`flex flex-wrap justify-center lg:justify-start items-center gap-3 md:gap-4 pt-6 transition-all duration-700 delay-400 ${
+              className={`w-full pt-8 transition-all duration-700 delay-400 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              {[
-                { name: 'Binance', logo: '/partners/binance.png' },
-                { name: 'Kraken', logo: '/partners/kraken.jpeg' },
-                { name: 'Coinbase', logo: '/partners/coinbase.png' },
-                { name: 'KuCoin', logo: '/partners/kucoin.png' },
-                { name: 'Bitfinex', logo: '/partners/bitfinex.png' },
-                { name: 'OKX', logo: '/partners/okx.png' },
-              ].map((partner) => (
-                <div
-                  key={partner.name}
-                  className="bg-white/80 dark:bg-card/80 backdrop-blur-sm border border-border/30 rounded-lg px-3 py-2 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/30"
-                >
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} Logo`}
-                    className="h-6 md:h-7 w-auto object-contain"
-                  />
-                </div>
-              ))}
+              <div className="flex justify-between items-center gap-2 w-full">
+                {[
+                  { name: 'Binance', logo: '/partners/binance.png' },
+                  { name: 'Kraken', logo: '/partners/kraken.jpeg' },
+                  { name: 'Coinbase', logo: '/partners/coinbase.png' },
+                  { name: 'KuCoin', logo: '/partners/kucoin.png' },
+                  { name: 'Bitfinex', logo: '/partners/bitfinex.png' },
+                  { name: 'OKX', logo: '/partners/okx.png' },
+                ].map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="flex-1 bg-white/80 dark:bg-card/80 backdrop-blur-sm border border-border/30 rounded-xl py-3 shadow-sm flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/30"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} Logo`}
+                      className="h-7 md:h-9 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
