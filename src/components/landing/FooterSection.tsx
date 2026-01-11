@@ -39,13 +39,16 @@ export function FooterSection() {
       <section id="kontakt" className="section-padding relative overflow-hidden">
         {/* Enhanced Background - wie Hero Section */}
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-gradient-hero-enhanced" />
         <div className="absolute inset-0 bg-grid-hero opacity-50" />
         
-        {/* Animierte Glow Orbs */}
-        <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] animate-float-pulse" />
-        <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-primary/8 rounded-full blur-[80px] animate-float-pulse-slow" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
+        {/* Gradient nach unten - bläulicher */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/15" />
+        
+        {/* Glow Orbs - verstärkt nach UNTEN */}
+        <div className="absolute top-20 left-10 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px] animate-float-pulse" />
+        <div className="absolute bottom-0 right-10 w-[450px] h-[450px] bg-primary/20 rounded-full blur-[100px] animate-float-pulse-slow" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[400px] bg-primary/15 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[350px] bg-primary/18 rounded-full blur-[100px]" />
         
         {/* Diagonal Shimmer Effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -76,8 +79,14 @@ export function FooterSection() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-muted/50 border-t border-border">
-        <div className="container-custom">
+      <footer className="py-16 relative overflow-hidden border-t border-primary/10">
+        {/* Passender Hintergrund zur CTA */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background/95 to-background" />
+        <div className="absolute inset-0 bg-grid-hero opacity-20" />
+        <div className="absolute top-0 left-1/3 w-[400px] h-[300px] bg-primary/10 rounded-full blur-[100px]" />
+        <div className="absolute top-0 right-1/3 w-[350px] h-[250px] bg-primary/8 rounded-full blur-[80px]" />
+        
+        <div className="container-custom relative z-10">
           {/* Main Footer Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
             
