@@ -111,7 +111,7 @@ export function HeroSection() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <span className="font-light">KI-gestütztes Trading</span>{' '}
+              <span className="font-light lg:block">KI-gestütztes Trading</span>{' '}
               <span className="text-primary lg:block">für digitale Assets</span>
             </h1>
 
