@@ -41,7 +41,7 @@ export function FooterSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/4 to-primary/10" />
         
         {/* Dezentes Grid */}
-        <div className="absolute inset-0 bg-grid-hero opacity-30" />
+        <div className="absolute inset-0 bg-grid-hero opacity-50" />
         
         {/* Zentraler Glow für CTA-Fokus */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary/6 rounded-full blur-[150px]" />
