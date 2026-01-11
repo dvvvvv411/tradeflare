@@ -37,23 +37,14 @@ export function FooterSection() {
     <>
       {/* Final CTA */}
       <section id="kontakt" className="section-padding relative overflow-hidden">
-        {/* Enhanced Background - wie Hero Section */}
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-grid-hero opacity-50" />
+        {/* Fließender Gradient von oben (transparent) nach unten (primary) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/4 to-primary/10" />
         
-        {/* Gradient nach unten - bläulicher */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/3 to-primary/8" />
+        {/* Dezentes Grid */}
+        <div className="absolute inset-0 bg-grid-hero opacity-30" />
         
-        {/* Glow Orbs - subtil nach UNTEN */}
-        <div className="absolute top-20 left-10 w-[300px] h-[300px] bg-primary/3 rounded-full blur-[80px] animate-float-pulse" />
-        <div className="absolute bottom-0 right-10 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] animate-float-pulse-slow" />
-        <div className="absolute bottom-0 left-1/4 w-[450px] h-[350px] bg-primary/8 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[350px] h-[300px] bg-primary/8 rounded-full blur-[100px]" />
-        
-        {/* Diagonal Shimmer Effect */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer-bg" />
-        </div>
+        {/* Zentraler Glow für CTA-Fokus */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary/6 rounded-full blur-[150px]" />
         
         <div className="container-custom relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -79,12 +70,10 @@ export function FooterSection() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 relative overflow-hidden border-t border-primary/10">
-        {/* Passender Hintergrund zur CTA */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background/95 to-background" />
-        <div className="absolute inset-0 bg-grid-hero opacity-20" />
-        <div className="absolute top-0 left-1/3 w-[400px] h-[300px] bg-primary/10 rounded-full blur-[100px]" />
-        <div className="absolute top-0 right-1/3 w-[350px] h-[250px] bg-primary/8 rounded-full blur-[80px]" />
+      <footer className="py-16 relative overflow-hidden">
+        {/* Fließender Übergang - nimmt Gradient der CTA nahtlos auf */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-background" />
+        <div className="absolute inset-0 bg-grid-hero opacity-15" />
         
         <div className="container-custom relative z-10">
           {/* Main Footer Grid */}
