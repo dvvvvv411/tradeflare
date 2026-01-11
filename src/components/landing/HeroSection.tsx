@@ -198,41 +198,26 @@ export function HeroSection() {
             <div className="relative">
               {/* Main Dashboard Card */}
               <div className="glass-strong rounded-2xl overflow-hidden hover-lift">
-                {/* Dashboard Header - Animated Blue Background */}
-                <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-primary relative overflow-hidden">
-                  {/* Floating Bubbles */}
-                  <div className="absolute top-1 left-4 w-12 h-12 bg-white/10 rounded-full blur-sm animate-float-slow" />
-                  <div className="absolute bottom-2 right-8 w-8 h-8 bg-white/5 rounded-full blur-sm animate-float-slower" />
-                  <div className="absolute top-3 right-20 w-6 h-6 bg-white/10 rounded-full animate-float-pulse" />
-                  
-                  {/* Shimmer Effect */}
-                  <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer-bg" />
-                  </div>
-                  
-                  {/* Particle Dots */}
-                  <div className="absolute top-2 left-1/4 w-1 h-1 bg-white/40 rounded-full" />
-                  <div className="absolute bottom-3 left-1/3 w-1.5 h-1.5 bg-white/30 rounded-full" />
-                  <div className="absolute top-4 right-1/4 w-1 h-1 bg-white/50 rounded-full" />
-                  
-                  <div className="flex items-center gap-3 relative z-10">
-                    <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                {/* Dashboard Header */}
+                <div className="px-6 py-4 border-b border-border/50 flex items-center justify-between bg-muted/30">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
                       <TrendingUp className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-sm text-white">Live Trading Dashboard</h3>
-                      <p className="text-xs text-white/90 flex items-center gap-1.5">
+                      <h3 className="font-semibold text-sm">Live Trading Dashboard</h3>
+                      <p className="text-xs text-primary flex items-center gap-1.5">
                         <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                         </span>
                         Bot aktiv
                       </p>
                     </div>
                   </div>
-                  <div className="text-right relative z-10">
-                    <p className="text-xs text-white/70">Erfolgsrate</p>
-                    <p className="text-lg font-bold text-white tabular-nums">{successRate}%</p>
+                  <div className="text-right">
+                    <p className="text-xs text-muted-foreground">Erfolgsrate</p>
+                    <p className="text-lg font-bold text-primary tabular-nums">{successRate}%</p>
                   </div>
                 </div>
 
@@ -290,41 +275,27 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Market Overview - Animated Blue Background */}
-                <div className="p-4 border-t border-white/10 bg-primary relative overflow-hidden">
-                  {/* Floating Bubbles */}
-                  <div className="absolute top-2 right-6 w-10 h-10 bg-white/10 rounded-full blur-sm animate-float-slow" />
-                  <div className="absolute bottom-1 left-10 w-6 h-6 bg-white/5 rounded-full blur-sm animate-float-slower" />
-                  <div className="absolute top-4 left-1/4 w-5 h-5 bg-white/10 rounded-full animate-float-pulse" />
-                  
-                  {/* Shimmer Effect */}
-                  <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer-bg" />
-                  </div>
-                  
-                  {/* Particle Dots */}
-                  <div className="absolute top-3 left-1/5 w-1 h-1 bg-white/40 rounded-full" />
-                  <div className="absolute bottom-2 right-1/3 w-1.5 h-1.5 bg-white/30 rounded-full" />
-                  
-                  <p className="text-xs font-medium text-white/80 uppercase tracking-wide mb-3 relative z-10">Marktübersicht</p>
-                  <div className="grid grid-cols-3 gap-3 relative z-10">
+                {/* Market Overview - Real CoinGecko Prices */}
+                <div className="p-4 border-t border-border/50 bg-muted/20">
+                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-3">Marktübersicht</p>
+                  <div className="grid grid-cols-3 gap-3">
                     {cryptoConfig.map((crypto) => {
                       const priceData = cryptoPrices[crypto.id] || fallbackPrices[crypto.id as keyof typeof fallbackPrices];
                       const change = priceData.eur_24h_change;
                       const isPositive = change >= 0;
                       
                       return (
-                        <div key={crypto.symbol} className="text-center p-2 rounded-lg bg-white/15 backdrop-blur-sm">
+                        <div key={crypto.symbol} className="text-center p-2 rounded-lg bg-white/50">
                           <div className="flex items-center justify-center gap-1.5 mb-1">
                             <img 
                               src={CRYPTO_ICONS[crypto.symbol as keyof typeof CRYPTO_ICONS]} 
                               alt={crypto.name}
                               className="w-4 h-4 rounded-full"
                             />
-                            <p className="text-xs font-medium text-white/80">{crypto.symbol}</p>
+                            <p className="text-xs font-medium text-muted-foreground">{crypto.symbol}</p>
                           </div>
-                          <p className="font-semibold text-sm text-white tabular-nums">€{priceData.eur.toLocaleString('de-DE')}</p>
-                          <div className={`flex items-center justify-center gap-0.5 text-xs ${isPositive ? 'text-green-300' : 'text-red-300'}`}>
+                          <p className="font-semibold text-sm tabular-nums">€{priceData.eur.toLocaleString('de-DE')}</p>
+                          <div className={`flex items-center justify-center gap-0.5 text-xs ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
                             <ArrowUpRight className={`w-3 h-3 ${!isPositive ? 'rotate-90' : ''}`} />
                             <span className="tabular-nums">{isPositive ? '+' : ''}{change.toFixed(2)}%</span>
                           </div>
