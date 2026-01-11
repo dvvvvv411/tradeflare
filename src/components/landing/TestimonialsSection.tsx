@@ -91,13 +91,7 @@ export const TestimonialsSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-1 h-8 bg-primary rounded-full" />
-            <span className="text-primary font-semibold tracking-wide uppercase text-sm">
-              Erfolgsgeschichten
-            </span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary">
             Das sagen unsere Trader
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
