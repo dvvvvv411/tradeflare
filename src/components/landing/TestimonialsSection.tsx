@@ -13,36 +13,36 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Michael Schmidt",
+    name: "Markus Hoffmann",
     role: "Neueinsteiger",
-    text: "Nach nur 3 Wochen mit dem KI-Trading-Bot habe ich bereits 920€ Gewinn gemacht. Die automatischen Trades sind ein Gamechanger für mich als Anfänger. Die Aktivierungsgebühr von 200€ hat sich schnell amortisiert.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=michael&backgroundColor=b6e3f4"
+    text: "Nach nur 3 Wochen mit dem KI-Trading-Bot habe ich bereits 920€ Gewinn erzielt. Als absoluter Anfänger hätte ich das nie für möglich gehalten. Die Aktivierungsgebühr von 200€ hat sich innerhalb der ersten Woche amortisiert.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 2,
-    name: "Hannah Weber",
+    name: "Sarah Bergmann",
     role: "Erfahrene Traderin",
-    text: "Ich trade seit 5 Jahren und war skeptisch. Nach einem Monat mit der KI habe ich meine bisherigen Ergebnisse verdreifacht. Die KI erkennt Muster, die ich verpasst hätte. Die Rendite von 28% im letzten Monat hat meine Erwartungen übertroffen.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=hannah&backgroundColor=ffd5dc"
+    text: "Ich trade seit 5 Jahren und war anfangs skeptisch. Nach einem Monat mit der KI habe ich meine bisherigen Ergebnisse verdreifacht. Die KI erkennt Muster, die ich selbst verpasst hätte. Die Rendite von 28% im letzten Monat hat alle meine Erwartungen übertroffen.",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 3,
-    name: "Thomas Müller",
+    name: "Florian Bauer",
     role: "Teilzeit-Investor",
     text: "Endlich kann ich nebenbei investieren, ohne ständig die Märkte beobachten zu müssen. Der Bot handelt für mich rund um die Uhr und erzielt durchschnittlich 1-3% Gewinn pro Trade. Die 200€ Aktivierungsgebühr ist fair und wird als Trading-Guthaben gutgeschrieben.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=thomas&backgroundColor=c0aede"
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 4,
-    name: "Julia Fischer",
-    role: "Finanzberaterin",
-    text: "Als Fachfrau bin ich begeistert von der Technologie. Die Algorithmen sind beeindruckend und die Erfolgsquote von über 90% spricht für sich. Dass die Plattform die Nutzerzahl limitiert, um die Performance hoch zu halten, ist ein kluger Schritt. Klare Empfehlung!",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=julia&backgroundColor=ffdfbf"
+    name: "Dr. Katharina Richter",
+    role: "Finanzexpertin",
+    text: "Als Finanzexpertin war ich zunächst skeptisch. Aber die Algorithmen sind beeindruckend und die Erfolgsquote von über 90% spricht für sich. Dass die Nutzerzahl limitiert wird, zeigt mir, dass hier Qualität vor Quantität steht. Klare Empfehlung!",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
   }
 ];
 
 const StarRating = () => (
-  <div className="flex gap-0.5">
+  <div className="flex gap-1">
     {[...Array(5)].map((_, i) => (
       <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
     ))}
@@ -74,20 +74,20 @@ export const TestimonialsSection = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-1 h-8 bg-primary rounded-full" />
             <span className="text-primary font-semibold tracking-wide uppercase text-sm">
-              Kundenstimmen
+              Erfolgsgeschichten
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Was unsere Nutzer sagen
+            Das sagen unsere Trader
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Echte Erfahrungen von echten Tradern – überzeuge dich selbst
+            Über 20.000 zufriedene Nutzer vertrauen bereits auf unsere KI
           </p>
         </div>
 
         {/* Featured Testimonial */}
         <div 
-          className={`max-w-4xl mx-auto mb-12 transition-all duration-700 delay-200 ${
+          className={`max-w-5xl mx-auto mb-8 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -102,7 +102,7 @@ export const TestimonialsSection = () => {
                 <img 
                   src={featured.avatar} 
                   alt={featured.name}
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary/20 bg-muted"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary/20 object-cover"
                 />
                 <div>
                   <h4 className="font-bold text-lg md:text-xl text-foreground">{featured.name}</h4>
@@ -133,13 +133,13 @@ export const TestimonialsSection = () => {
               <button
                 key={testimonial.id}
                 onClick={() => setSelectedIndex(originalIndex)}
-                className="bg-card/50 hover:bg-card border border-border hover:border-primary/30 rounded-xl p-5 text-left transition-all duration-300 hover-lift group"
+                className="bg-card hover:bg-card/95 border border-border hover:border-primary/40 rounded-xl p-6 text-left transition-all duration-300 hover-lift shadow-lg group"
               >
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-3 mb-4">
                   <img 
                     src={testimonial.avatar} 
                     alt={testimonial.name}
-                    className="w-10 h-10 rounded-full border border-border group-hover:border-primary/20 bg-muted transition-colors"
+                    className="w-12 h-12 rounded-full border border-border group-hover:border-primary/30 object-cover transition-colors"
                   />
                   <div>
                     <h5 className="font-semibold text-sm text-foreground">{testimonial.name}</h5>
@@ -147,15 +147,15 @@ export const TestimonialsSection = () => {
                   </div>
                 </div>
                 
-                <div className="mb-2 scale-90 origin-left">
+                <div className="mb-3">
                   <StarRating />
                 </div>
                 
-                <p className="text-sm text-muted-foreground line-clamp-2">
+                <p className="text-sm text-muted-foreground line-clamp-3">
                   "{testimonial.text}"
                 </p>
                 
-                <span className="inline-block mt-3 text-xs text-primary font-medium group-hover:underline">
+                <span className="inline-block mt-4 text-xs text-primary font-medium group-hover:underline">
                   Weiterlesen →
                 </span>
               </button>
