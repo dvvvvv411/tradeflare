@@ -74,7 +74,7 @@ export function FooterSection() {
             
             {/* Column 1: Logo & Description */}
             <div className="space-y-4">
-              <img src={tradeFlareLogo} alt="TradeFlare" className="h-12 w-auto" />
+              <img src={tradeFlareLogo} alt="TradeFlare" className="h-[4.5rem] w-auto" />
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Die Zukunft des Krypto-Tradings mit KI-Unterstützung. Maximiere deine Renditen durch unseren fortschrittlichen Algorithmus.
               </p>
