@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Star, CheckCircle2, TrendingUp, Calendar } from 'lucide-react';
+import { Star, CheckCircle2 } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 interface Testimonial {
@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
     profit: "+920€",
     timeframe: "3 Wochen",
-    date: "8. Januar 2025"
+    date: "9. Januar 2026"
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
     profit: "+4.200€",
     timeframe: "1 Monat",
-    date: "5. Januar 2025"
+    date: "6. Januar 2026"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const testimonials: Testimonial[] = [
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     profit: "+1.850€",
     timeframe: "6 Wochen",
-    date: "2. Januar 2025"
+    date: "4. Januar 2026"
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     profit: "+3.100€",
     timeframe: "2 Monate",
-    date: "28. Dezember 2024"
+    date: "28. Dezember 2025"
   }
 ];
 
@@ -146,27 +146,6 @@ export const TestimonialsSection = () => {
               <blockquote className="bg-muted/50 border border-border/50 rounded-xl p-6 text-lg md:text-xl leading-relaxed text-foreground/90">
                 "{featured.text}"
               </blockquote>
-              
-              {/* Profit Stats */}
-              <div className="flex flex-wrap items-center gap-6 mt-6 pt-6 border-t border-border/50">
-                <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-full bg-green-500/10">
-                    <TrendingUp className="w-5 h-5 text-green-500" />
-                  </div>
-                  <span className="text-sm">
-                    <span className="font-bold text-green-500 text-lg">{featured.profit}</span>
-                    <span className="text-muted-foreground ml-1">Gewinn</span>
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-full bg-primary/10">
-                    <Calendar className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-sm text-muted-foreground">
-                    Nach <span className="font-semibold text-foreground">{featured.timeframe}</span>
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
