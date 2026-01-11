@@ -111,9 +111,8 @@ export function HeroSection() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <span className="font-light">KI-gestütztes Trading</span>
-              <br />
-              <span className="text-primary">für digitale Assets.</span>
+              <span className="font-light">KI-gestütztes Trading</span>{' '}
+              <span className="text-primary lg:block">für digitale Assets</span>
             </h1>
 
             {/* Subheadline - Consumer-friendly */}
@@ -161,7 +160,7 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-2 bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium">
                 <TrendingUp className="w-4 h-4" />
-                <span>87% profitable Trades</span>
+                <span>92% profitable Trades</span>
               </div>
               <div className="flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
                 <Clock className="w-4 h-4" />
