@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Zap, Bot } from 'lucide-react';
+import tradeFlareLogo from '@/assets/tradeflare-logo.png';
 
 const REGISTER_URL = '#register';
 
@@ -73,7 +74,7 @@ export function FooterSection() {
             
             {/* Column 1: Logo & Description */}
             <div className="space-y-4">
-              <div className="text-2xl font-bold text-foreground">CryptoAI</div>
+              <img src={tradeFlareLogo} alt="TradeFlare" className="h-8 w-auto" />
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Die Zukunft des Krypto-Tradings mit KI-Unterstützung. Maximiere deine Renditen durch unseren fortschrittlichen Algorithmus.
               </p>
@@ -102,7 +103,7 @@ export function FooterSection() {
               <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
                 <Bot className="w-8 h-8 text-primary" />
                 <div>
-                  <p className="text-sm font-medium text-foreground">CryptoAI Engine</p>
+                  <p className="text-sm font-medium text-foreground">TradeFlare Engine</p>
                   <p className="text-xs text-muted-foreground">v3.2 Neural Network</p>
                 </div>
               </div>
@@ -130,7 +131,7 @@ export function FooterSection() {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex justify-center items-center">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} CryptoAI. Alle Rechte vorbehalten.
+                © {new Date().getFullYear()} TradeFlare. Alle Rechte vorbehalten.
               </p>
             </div>
           </div>
