@@ -14,20 +14,20 @@ const steps = [
   {
     icon: Wallet,
     number: '02',
-    title: 'Kapital einzahlen',
-    description: 'Starte bereits ab 200€. Du behältst die volle Kontrolle über dein Investment.',
+    title: 'Exchange verbinden',
+    description: 'Verbinde deine Krypto-Exchange (Binance, Kraken, etc.). Dein Kapital bleibt bei dir.',
   },
   {
     icon: Bot,
     number: '03',
     title: 'KI aktivieren',
-    description: 'Ein Klick genügt. Die KI beginnt sofort mit der Marktanalyse.',
+    description: 'Die KI beginnt sofort mit der Analyse von Bitcoin, Ethereum & Altcoins.',
   },
   {
     icon: TrendingUp,
     number: '04',
     title: 'Ergebnisse verfolgen',
-    description: 'Beobachte in Echtzeit, wie die KI für dich arbeitet – 24/7.',
+    description: 'Beobachte in Echtzeit, wie die KI für dich Krypto tradet – 24/7.',
   },
 ];
 
@@ -35,12 +35,12 @@ const features = [
   {
     icon: Phone,
     title: 'Persönlicher Berater',
-    description: 'Dein 1:1 Ansprechpartner für alle Fragen rund um dein Investment.',
+    description: 'Dein 1:1 Ansprechpartner für alle Fragen rund um dein Krypto-Investment.',
   },
   {
     icon: ShieldCheck,
     title: 'Volle Kontrolle',
-    description: 'Dein Kapital bleibt auf deinem eigenen Exchange-Konto.',
+    description: 'Dein Kapital bleibt auf deiner eigenen Krypto-Exchange.',
   },
   {
     icon: Headphones,
@@ -67,10 +67,10 @@ export function HowItWorksSection() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             In 4 Schritten zum{' '}
-            <span className="text-primary">automatisierten Trading</span>
+            <span className="text-primary">automatisierten Krypto-Trading</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Keine technischen Vorkenntnisse nötig. In wenigen Minuten bist du startklar.
+            Keine technischen Vorkenntnisse nötig. In wenigen Minuten ist dein Bot startklar.
           </p>
         </div>
 
@@ -149,10 +149,10 @@ export function HowItWorksSection() {
         >
           <Button 
             size="lg"
-            className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-xl glow-primary hover-lift"
+            className="group bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-6 text-lg font-semibold rounded-xl glow-primary hover-lift"
             onClick={() => window.location.href = REGISTER_URL}
           >
-            Jetzt starten – Platz reservieren
+            Jetzt Trading starten
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
           <p className="text-sm text-muted-foreground mt-4">

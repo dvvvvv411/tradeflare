@@ -27,7 +27,7 @@ export function ScarcitySection() {
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Um Serverkapazität und Servicequalität zu gewährleisten, ist die Teilnehmeranzahl 
-            auf 20.000 limitiert. Sichere dir jetzt deinen exklusiven Zugang.
+            auf 20.000 limitiert. Starte jetzt mit automatisiertem Krypto-Trading.
           </p>
 
           {/* Progress Bar */}
@@ -50,10 +50,10 @@ export function ScarcitySection() {
 
           <Button 
             size="lg"
-            className="group bg-primary hover:bg-primary/90 text-white px-10 py-7 text-xl font-bold rounded-xl animate-pulse-glow"
+            className="group bg-primary hover:bg-primary-dark text-white px-10 py-7 text-xl font-bold rounded-xl animate-pulse-glow"
             onClick={() => window.location.href = REGISTER_URL}
           >
-            Jetzt Early Access sichern
+            Jetzt kostenlos starten
             <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
