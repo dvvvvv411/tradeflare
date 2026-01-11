@@ -5,10 +5,9 @@ import { Menu, X } from 'lucide-react';
 const REGISTER_URL = '#register';
 
 const navItems = [
-  { label: 'Funktionen', href: '#funktionen' },
-  { label: 'Vorteile', href: '#vorteile' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Kontakt', href: '#kontakt' },
+  { label: 'Trading Bot', href: '#trading-bot' },
+  { label: 'Erfahrungen', href: '#erfahrungen' },
+  { label: 'Exklusiver Zugang', href: '#exklusiver-zugang' },
 ];
 
 export function HeaderSection() {

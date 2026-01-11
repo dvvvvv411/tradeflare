@@ -19,7 +19,7 @@ export function UrgencyCtaSection() {
   const progressPercentage = (spotsTaken / totalSpots) * 100;
 
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
+    <section id="trading-bot" className="py-20 lg:py-28 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
