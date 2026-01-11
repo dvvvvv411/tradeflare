@@ -19,7 +19,6 @@ export function HeaderSection() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -34,35 +33,38 @@ export function HeaderSection() {
 
   return (
     <header
-      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl border border-border shadow-sm rounded-2xl mx-4 sm:mx-6 lg:mx-8'
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-sm'
           : 'bg-transparent'
       }`}
     >
-      <div className={`${isScrolled ? 'px-4 sm:px-6' : 'container-custom'}`}>
+      <div className="container-custom">
         <div className="grid lg:grid-cols-3 items-center h-16 md:h-20">
-          {/* Left Column: Logo */}
+          {/* Linke Spalte: Logo */}
           <div className="flex items-center">
             <a href="/" className="text-xl md:text-2xl font-bold text-foreground">
               CryptoAI
             </a>
           </div>
 
-          {/* Middle Column: Navigation CENTERED */}
+          {/* Mittlere Spalte: Navigation ZENTRIERT */}
           <nav className="hidden lg:flex items-center justify-center gap-2">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:text-foreground hover:bg-primary/10 rounded-full transition-all duration-200"
+                className="px-4 py-2 text-sm font-semibold text-foreground 
+                           bg-muted/50 hover:bg-primary/10 hover:text-primary
+                           border border-transparent hover:border-primary/20
+                           rounded-full transition-all duration-200"
               >
                 {item.label}
               </button>
             ))}
           </nav>
 
-          {/* Right Column: CTA Button aligned to end */}
+          {/* Rechte Spalte: CTA Button */}
           <div className="hidden lg:flex justify-end">
             <Button
               onClick={() => window.location.href = REGISTER_URL}
@@ -84,18 +86,19 @@ export function HeaderSection() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-white/95 backdrop-blur-xl">
+          <div className="lg:hidden py-4 border-t border-border/50">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left py-3 px-4 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors font-medium"
+                  className="text-left py-3 px-4 text-foreground font-medium
+                             hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-4 px-4">
+              <div className="pt-4">
                 <Button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
