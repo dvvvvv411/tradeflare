@@ -190,148 +190,113 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Futuristic Trading Terminal */}
+          {/* Right Content - Animated Trading Dashboard */}
           <div 
             className={`relative transition-all duration-1000 delay-500 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
             }`}
           >
-            <div className="relative" style={{ transform: 'perspective(1000px) rotateX(2deg) rotateY(-2deg)', transformStyle: 'preserve-3d' }}>
-              {/* Outer Glow Ring */}
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 blur-md animate-border-glow" />
-              <div className="absolute -inset-3 rounded-3xl bg-primary/10 blur-2xl glow-ring" />
-              
-              {/* Main Dashboard Card - Futuristic Glass */}
-              <div className="glass-futuristic rounded-2xl overflow-hidden relative">
-                {/* Scan Line Effect */}
-                <div className="absolute inset-0 scan-line overflow-hidden pointer-events-none" />
-                
-                {/* Dashboard Header - Futuristic */}
-                <div className="px-6 py-4 border-b border-white/20 flex items-center justify-between relative">
+            <div className="relative">
+              {/* Main Dashboard Card */}
+              <div className="glass-strong rounded-2xl overflow-hidden hover-lift">
+                {/* Dashboard Header */}
+                <div className="px-6 py-4 border-b border-border/50 flex items-center justify-between bg-muted/30">
                   <div className="flex items-center gap-3">
-                    {/* Hexagon-style Icon */}
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center rotate-3 shadow-lg shadow-primary/30">
-                      <TrendingUp className="w-5 h-5 text-white -rotate-3" />
+                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+                      <TrendingUp className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-sm tracking-tight">CryptoAI Terminal</h3>
-                      <p className="text-xs text-primary flex items-center gap-1.5 font-medium">
+                      <h3 className="font-semibold text-sm">Live Trading Dashboard</h3>
+                      <p className="text-xs text-primary flex items-center gap-1.5">
                         <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                         </span>
-                        System aktiv
+                        Bot aktiv
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <div className="w-2 h-2 rounded-full bg-primary/60" />
-                    <div className="w-2 h-2 rounded-full bg-primary/30" />
+                  <div className="text-right">
+                    <p className="text-xs text-muted-foreground">Erfolgsrate</p>
+                    <p className="text-lg font-bold text-primary tabular-nums">{successRate}%</p>
                   </div>
                 </div>
 
-                {/* Stats Row - Glassmorphic Cards */}
-                <div className="p-4 grid grid-cols-2 gap-3">
-                  <div className="glass-inner p-4 text-center hover:bg-white/60 transition-colors">
-                    <p className="text-2xl font-bold text-green-500 tabular-nums">+{todayProfit}%</p>
-                    <p className="text-lg font-semibold tabular-nums">€{accountBalance.toLocaleString()}</p>
-                    <p className="text-xs text-muted-foreground mt-1">Kontostand</p>
+                {/* Stats Row - 2 columns */}
+                <div className="grid grid-cols-2 divide-x divide-border/50 bg-white/50">
+                  <div className="px-6 py-4 text-center">
+                    <p className="text-xs text-muted-foreground mb-1">Kontostand</p>
+                    <p className="text-xl font-bold tabular-nums">€{accountBalance.toLocaleString()}</p>
+                    <p className="text-xs text-green-500 font-medium">+{todayProfit}% heute</p>
                   </div>
-                  <div className="glass-inner p-4 text-center hover:bg-white/60 transition-colors">
-                    <p className="text-2xl font-bold text-green-500 tabular-nums">{successRate}%</p>
-                    <p className="text-xs text-muted-foreground mt-1">Win Rate</p>
-                    {/* Mini Progress Bar */}
-                    <div className="mt-2 h-1.5 bg-white/30 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-1000" 
-                        style={{ width: isVisible ? '87%' : '0%' }} 
-                      />
-                    </div>
+                  <div className="px-6 py-4 text-center">
+                    <p className="text-xs text-muted-foreground mb-1">Erfolgsrate</p>
+                    <p className="text-xl font-bold text-green-500 tabular-nums">{successRate}%</p>
+                    <p className="text-xs text-muted-foreground">Win Rate</p>
                   </div>
                 </div>
 
-                {/* Live Trades - Futuristic Container */}
-                <div className="p-4">
-                  <div className="glass-inner p-3">
-                    <div className="flex items-center justify-between mb-3">
-                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                        Aktive Positionen
-                      </p>
-                      <span className="text-xs text-green-500 font-medium flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10">
-                        <span className="relative flex h-1.5 w-1.5">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
-                        </span>
-                        Live
+                {/* Live Trades - Fixed height container */}
+                <div className="p-4 border-t border-border/50">
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Aktuelle Trades</p>
+                    <span className="text-xs text-green-500 flex items-center gap-1">
+                      <span className="relative flex h-1.5 w-1.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
                       </span>
-                    </div>
-                    <div className="space-y-2 min-h-[168px]">
-                      {trades.map((trade, index) => (
-                        <div 
-                          key={trade.id}
-                          className={`flex items-center justify-between p-3 rounded-lg h-14 transition-all duration-300 ${
-                            animatingTrade === trade.id 
-                              ? 'bg-green-500/15 shadow-sm shadow-green-500/20' 
-                              : 'bg-white/40 hover:bg-white/60'
-                          }`}
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="relative">
-                              <img 
-                                src={CRYPTO_ICONS[trade.symbol]} 
-                                alt={trade.crypto}
-                                className="w-9 h-9 rounded-full ring-2 ring-white/50 shadow-sm"
-                              />
-                              {animatingTrade === trade.id && (
-                                <div className="absolute inset-0 rounded-full bg-green-500/30 animate-ping" />
-                              )}
-                            </div>
-                            <div>
-                              <p className="font-semibold text-sm">{trade.crypto}</p>
-                              <p className="text-xs text-green-500 font-bold tracking-wide">{trade.type}</p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <p className="font-bold text-sm text-green-500 tabular-nums">+€{trade.profit}</p>
-                            <p className="text-xs text-green-500/80 tabular-nums font-medium">+{trade.percent}%</p>
+                      Live
+                    </span>
+                  </div>
+                  <div className="space-y-2 min-h-[168px]">
+                    {trades.map((trade) => (
+                      <div 
+                        key={trade.id}
+                        className={`flex items-center justify-between p-3 rounded-lg h-14 transition-colors duration-300 ${
+                          animatingTrade === trade.id ? 'bg-green-500/10' : 'bg-muted/30'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <img 
+                            src={CRYPTO_ICONS[trade.symbol]} 
+                            alt={trade.crypto}
+                            className="w-8 h-8 rounded-full"
+                          />
+                          <div>
+                            <p className="font-medium text-sm">{trade.crypto}</p>
+                            <p className="text-xs text-green-500 font-medium">{trade.type}</p>
                           </div>
                         </div>
-                      ))}
-                    </div>
+                        <div className="text-right">
+                          <p className="font-semibold text-sm text-green-500 tabular-nums">+€{trade.profit}</p>
+                          <p className="text-xs text-green-500/80 tabular-nums">+{trade.percent}%</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Market Overview - Futuristic Ticker */}
-                <div className="p-4 border-t border-white/20">
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    Live Markets
-                  </p>
-                  <div className="grid grid-cols-3 gap-2">
+                {/* Market Overview - Real CoinGecko Prices */}
+                <div className="p-4 border-t border-border/50 bg-muted/20">
+                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-3">Marktübersicht</p>
+                  <div className="grid grid-cols-3 gap-3">
                     {cryptoConfig.map((crypto) => {
                       const priceData = cryptoPrices[crypto.id] || fallbackPrices[crypto.id as keyof typeof fallbackPrices];
                       const change = priceData.eur_24h_change;
                       const isPositive = change >= 0;
                       
                       return (
-                        <div 
-                          key={crypto.symbol} 
-                          className="glass-inner text-center p-3 hover:bg-white/60 transition-all group"
-                        >
-                          <div className="flex items-center justify-center gap-1.5 mb-2">
+                        <div key={crypto.symbol} className="text-center p-2 rounded-lg bg-white/50">
+                          <div className="flex items-center justify-center gap-1.5 mb-1">
                             <img 
                               src={CRYPTO_ICONS[crypto.symbol as keyof typeof CRYPTO_ICONS]} 
                               alt={crypto.name}
-                              className="w-5 h-5 rounded-full ring-1 ring-white/50"
+                              className="w-4 h-4 rounded-full"
                             />
-                            <p className="text-xs font-bold text-foreground">{crypto.symbol}</p>
+                            <p className="text-xs font-medium text-muted-foreground">{crypto.symbol}</p>
                           </div>
-                          <p className="font-bold text-sm tabular-nums group-hover:text-primary transition-colors">
-                            €{priceData.eur.toLocaleString('de-DE')}
-                          </p>
-                          <div className={`flex items-center justify-center gap-0.5 text-xs font-semibold mt-1 ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
+                          <p className="font-semibold text-sm tabular-nums">€{priceData.eur.toLocaleString('de-DE')}</p>
+                          <div className={`flex items-center justify-center gap-0.5 text-xs ${isPositive ? 'text-green-500' : 'text-red-500'}`}>
                             <ArrowUpRight className={`w-3 h-3 ${!isPositive ? 'rotate-90' : ''}`} />
                             <span className="tabular-nums">{isPositive ? '+' : ''}{change.toFixed(2)}%</span>
                           </div>
@@ -340,10 +305,10 @@ export function HeroSection() {
                     })}
                   </div>
                 </div>
-
-                {/* Bottom Gradient Line */}
-                <div className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
               </div>
+
+              {/* Decorative glow */}
+              <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl -z-10" />
             </div>
           </div>
         </div>
