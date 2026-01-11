@@ -7,8 +7,7 @@ export function FooterSection() {
   return (
     <>
       {/* Final CTA */}
-      <section id="kontakt" className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
+      <section id="kontakt" className="section-padding relative overflow-hidden bg-gradient-to-b from-primary/3 via-primary/5 to-background">
         <div className="container-custom relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Bereit, dein Trading zu <span className="text-primary">automatisieren</span>?
@@ -33,7 +32,7 @@ export function FooterSection() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
+      <footer className="py-12 border-t border-border bg-background">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-2xl font-bold text-foreground">CryptoAI</div>

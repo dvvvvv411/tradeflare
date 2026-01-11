@@ -114,8 +114,7 @@ export function HeroSection() {
         <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer-bg" />
       </div>
       
-      {/* Bottom Fade - Clear section separation */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      {/* Removed bottom fade for seamless section transitions */}
 
       <div ref={ref} className="container-custom relative z-10 py-12">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-12 items-center">
