@@ -86,7 +86,7 @@ export function UrgencyCtaSection() {
               {/* CTA Button - Full Width, mt-auto für gleiche Höhe */}
               <Button 
                 size="lg"
-                className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground py-7 text-xl font-bold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 animate-pulse-glow mt-auto"
+                className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground py-7 text-xl font-bold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 animate-button-pulse mt-auto"
                 asChild
               >
                 <a href="#register">

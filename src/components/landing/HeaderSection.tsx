@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
 
 const REGISTER_URL = '#register';
 
@@ -67,9 +67,10 @@ export function HeaderSection() {
           <div className="hidden lg:flex justify-end">
             <Button
               onClick={() => window.location.href = REGISTER_URL}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6"
+              className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 animate-button-pulse"
             >
-              Jetzt starten
+              <LogIn className="w-4 h-4 mr-2" />
+              Anmelden
             </Button>
           </div>
 
@@ -103,9 +104,10 @@ export function HeaderSection() {
                     setIsMobileMenuOpen(false);
                     window.location.href = REGISTER_URL;
                   }}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                  className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold animate-button-pulse"
                 >
-                  Jetzt starten
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Anmelden
                 </Button>
               </div>
             </nav>
