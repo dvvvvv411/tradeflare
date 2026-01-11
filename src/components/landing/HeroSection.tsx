@@ -45,7 +45,7 @@ export function HeroSection() {
   
   const accountBalance = useCountUp({ end: 12847, duration: 2500, enabled: isVisible });
   const todayProfit = useCountUp({ end: 4.2, duration: 2000, enabled: isVisible, decimals: 1 });
-  const successRate = useCountUp({ end: 87.2, duration: 2000, enabled: isVisible, decimals: 1 });
+  const successRate = useCountUp({ end: 92.6, duration: 2000, enabled: isVisible, decimals: 1 });
 
   // Fetch real crypto prices from CoinGecko
   const fetchPrices = useCallback(async () => {
@@ -198,26 +198,52 @@ export function HeroSection() {
             <div className="relative">
               {/* Main Dashboard Card */}
               <div className="glass-strong rounded-2xl overflow-hidden hover-lift">
-                {/* Dashboard Header */}
-                <div className="px-6 py-4 border-b border-border/50 flex items-center justify-between bg-muted/30">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-sm">Live Trading Dashboard</h3>
-                      <p className="text-xs text-primary flex items-center gap-1.5">
-                        <span className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
-                        Bot aktiv
-                      </p>
-                    </div>
+                {/* Dashboard Header - Animated Blue Banner */}
+                <div className="relative px-6 py-4 border-b border-primary/30 flex items-center justify-between overflow-hidden bg-gradient-to-r from-primary via-primary/90 to-primary">
+                  {/* Floating Bubbles */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute w-20 h-20 bg-white/10 rounded-full -top-10 left-[10%] animate-float-slow" />
+                    <div className="absolute w-14 h-14 bg-white/15 rounded-full top-4 left-[30%] animate-float-pulse" />
+                    <div className="absolute w-10 h-10 bg-white/10 rounded-full -bottom-4 left-[60%] animate-float-slower" />
+                    <div className="absolute w-16 h-16 bg-white/10 rounded-full top-0 right-[15%] animate-float-pulse-slow" />
+                    <div className="absolute w-8 h-8 bg-white/15 rounded-full bottom-2 right-[35%] animate-float" />
                   </div>
-                  <div className="text-right">
-                    <p className="text-xs text-muted-foreground">Erfolgsrate</p>
-                    <p className="text-lg font-bold text-primary tabular-nums">{successRate}%</p>
+                  
+                  {/* Shimmer Effect */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer-bg" />
+                  </div>
+                  
+                  {/* Particle Dots */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute w-1 h-1 bg-white/40 rounded-full top-2 left-[20%]" />
+                    <div className="absolute w-1.5 h-1.5 bg-white/30 rounded-full top-6 left-[45%]" />
+                    <div className="absolute w-1 h-1 bg-white/50 rounded-full bottom-3 left-[70%]" />
+                    <div className="absolute w-1 h-1 bg-white/40 rounded-full top-4 right-[25%]" />
+                    <div className="absolute w-1.5 h-1.5 bg-white/35 rounded-full bottom-2 right-[50%]" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center justify-between w-full">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                        <TrendingUp className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-sm text-white">Live Trading Dashboard</h3>
+                        <p className="text-xs text-white/90 flex items-center gap-1.5">
+                          <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                          </span>
+                          Bot aktiv
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-white/70">Erfolgsrate</p>
+                      <p className="text-lg font-bold text-white tabular-nums">{successRate}%</p>
+                    </div>
                   </div>
                 </div>
 
