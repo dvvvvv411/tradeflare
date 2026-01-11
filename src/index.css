@@ -228,4 +228,49 @@
       linear-gradient(90deg, hsl(210 100% 56% / 0.02) 1px, transparent 1px);
     background-size: 60px 60px;
   }
+
+  /* Hero Grid - Enhanced */
+  .bg-grid-hero {
+    background-image: 
+      linear-gradient(to right, hsl(210 100% 56% / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(210 100% 56% / 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Hero Enhanced Gradient */
+  .bg-gradient-hero-enhanced {
+    background: linear-gradient(
+      180deg,
+      hsl(210 100% 56% / 0.12) 0%,
+      hsl(210 100% 56% / 0.05) 30%,
+      transparent 60%
+    );
+  }
+
+  /* Slow Float Animations for Orbs */
+  @keyframes float-slow {
+    0%, 100% { 
+      transform: translate(0, 0) scale(1); 
+    }
+    50% { 
+      transform: translate(20px, -20px) scale(1.05); 
+    }
+  }
+
+  @keyframes float-slower {
+    0%, 100% { 
+      transform: translate(0, 0) scale(1); 
+    }
+    50% { 
+      transform: translate(-15px, 15px) scale(1.03); 
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .animate-float-slower {
+    animation: float-slower 12s ease-in-out infinite;
+  }
 }

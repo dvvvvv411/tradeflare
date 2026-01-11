@@ -96,10 +96,21 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
-      {/* Subtle Background Elements */}
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-40 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-40 right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      {/* Enhanced Background Elements */}
+      
+      {/* Top Gradient Glow - Stronger Primary accent */}
+      <div className="absolute inset-0 bg-gradient-hero-enhanced" />
+      
+      {/* Improved Grid */}
+      <div className="absolute inset-0 bg-grid-hero opacity-50" />
+      
+      {/* Animated Glow Orbs */}
+      <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-float-slow" />
+      <div className="absolute bottom-20 right-10 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[80px] animate-float-slower" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
+      
+      {/* Bottom Fade - Clear section separation */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
       <div ref={ref} className="container-custom relative z-10 py-12">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-12 items-center">
