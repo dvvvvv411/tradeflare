@@ -1,7 +1,7 @@
 import { useCountUp } from '@/hooks/useCountUp';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, TrendingUp, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, TrendingUp, ArrowUpRight, Clock, Wallet } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 
 const REGISTER_URL = '#register';
@@ -111,19 +111,19 @@ export function HeroSection() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <span className="font-light">Algorithmisches</span>
+              <span className="font-light">KI-gestütztes Trading</span>
               <br />
-              <span className="text-primary">Krypto-Trading.</span>
+              <span className="text-primary">für digitale Assets.</span>
             </h1>
 
-            {/* Subheadline - Concise & Professional */}
+            {/* Subheadline - Consumer-friendly */}
             <p 
               className={`text-lg sm:text-xl text-muted-foreground max-w-md mx-auto lg:mx-0 leading-relaxed transition-all duration-700 delay-100 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Professionelle Handelsalgorithmen. Vollautomatisiert. 
-              Rund um die Uhr im Krypto-Markt aktiv.
+              Unsere KI erkennt profitable Trades und handelt automatisch für dich – 
+              auch wenn du schläfst.
             </p>
 
             {/* CTAs - Clean & Serious */}
@@ -138,7 +138,7 @@ export function HeroSection() {
                 onClick={() => window.location.href = REGISTER_URL}
               >
                 <span className="flex items-center gap-2">
-                  Portfolio starten
+                  Jetzt anmelden
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
@@ -153,15 +153,24 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Mini Stats - Subtle & Factual */}
+            {/* Mini Stats - Visual Pill Badges */}
             <div 
-              className={`flex flex-wrap gap-8 justify-center lg:justify-start pt-4 text-sm text-muted-foreground transition-all duration-700 delay-300 ${
+              className={`flex flex-wrap gap-3 justify-center lg:justify-start pt-4 transition-all duration-700 delay-300 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <span className="tabular-nums">87% Erfolgsrate</span>
-              <span>24/7 aktiv</span>
-              <span>Ab €200</span>
+              <div className="flex items-center gap-2 bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium">
+                <TrendingUp className="w-4 h-4" />
+                <span>87% profitable Trades</span>
+              </div>
+              <div className="flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                <Clock className="w-4 h-4" />
+                <span>Handelt 24/7</span>
+              </div>
+              <div className="flex items-center gap-2 bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-medium">
+                <Wallet className="w-4 h-4" />
+                <span>Ab €200 starten</span>
+              </div>
             </div>
           </div>
 
