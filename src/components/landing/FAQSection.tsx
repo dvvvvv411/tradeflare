@@ -2,11 +2,30 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const faqs = [
-  { q: 'Wie viel Startkapital benötige ich?', a: 'Du kannst bereits ab 200€ starten. Es gibt keine Obergrenze für dein Investment.' },
-  { q: 'Ist mein Investment sicher?', a: 'Dein Kapital bleibt auf deinem eigenen Exchange-Konto. Wir haben keinen direkten Zugriff auf deine Gelder.' },
-  { q: 'Brauche ich Vorkenntnisse?', a: 'Nein. Unser persönlicher Berater erklärt dir alles Schritt für Schritt am Telefon.' },
-  { q: 'Wie kann ich Gewinne auszahlen?', a: 'Jederzeit. Dein Kapital und Gewinne sind immer auf deinem Exchange-Konto verfügbar.' },
-  { q: 'Was passiert nach der Anmeldung?', a: 'Du erhältst einen Anruf von deinem persönlichen Berater, der dich durch die Einrichtung führt.' },
+  { 
+    q: 'Welche Kryptowährungen werden gehandelt?', 
+    a: 'Die KI tradet primär Bitcoin (BTC), Ethereum (ETH), Solana (SOL) und weitere etablierte Altcoins. Die Auswahl basiert auf Liquidität und Marktkapitalisierung.' 
+  },
+  { 
+    q: 'Wie viel Startkapital benötige ich?', 
+    a: 'Du kannst bereits ab 200€ starten. Es gibt keine Obergrenze für dein Investment.' 
+  },
+  { 
+    q: 'Ist mein Krypto-Investment sicher?', 
+    a: 'Dein Kapital bleibt auf deiner eigenen Exchange (z.B. Binance, Kraken). Wir haben keinen direkten Zugriff auf deine Kryptos.' 
+  },
+  { 
+    q: 'Brauche ich Krypto-Erfahrung?', 
+    a: 'Nein. Unser persönlicher Berater erklärt dir alles Schritt für Schritt – von der Exchange-Einrichtung bis zur Bot-Aktivierung.' 
+  },
+  { 
+    q: 'Wie kann ich Gewinne auszahlen?', 
+    a: 'Jederzeit. Dein Kapital und Krypto-Gewinne sind immer auf deinem Exchange-Konto verfügbar.' 
+  },
+  { 
+    q: 'Was passiert nach der Anmeldung?', 
+    a: 'Du erhältst einen Anruf von deinem persönlichen Berater, der dich durch die Exchange-Verbindung und Bot-Einrichtung führt.' 
+  },
 ];
 
 export function FAQSection() {
@@ -19,7 +38,7 @@ export function FAQSection() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold">Häufige Fragen</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold">Häufige Fragen zum Krypto-Trading</h2>
         </div>
         <div className={`max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <Accordion type="single" collapsible className="space-y-4">

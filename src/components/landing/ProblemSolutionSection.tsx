@@ -4,36 +4,36 @@ import { Brain, Clock, TrendingDown, AlertCircle, CheckCircle, Sparkles, ArrowDo
 const problems = [
   {
     icon: AlertCircle,
-    title: 'Emotionales Trading',
-    description: 'Angst und Gier führen zu Fehlentscheidungen – und kosten dich bares Geld.',
+    title: 'Emotionales Krypto-Trading',
+    description: 'Bitcoin fällt 10%? Panikverkauf. Bitcoin steigt? FOMO-Käufe. Emotionen kosten dich bares Geld.',
   },
   {
     icon: Clock,
-    title: 'Keine Zeit für Analyse',
-    description: 'Der Markt schläft nie. Du schon. Und verpasst die besten Gelegenheiten.',
+    title: 'Der Krypto-Markt schläft nie',
+    description: 'Während du schläfst, bewegt sich Bitcoin. Die besten Trades passieren oft nachts.',
   },
   {
     icon: TrendingDown,
-    title: 'Überforderung & Stress',
-    description: 'Hunderte Coins, tausende Charts, endlose Nachrichten. Wer behält da den Überblick?',
+    title: 'Überforderung im Altcoin-Dschungel',
+    description: 'Hunderte Coins, volatile Märkte, endlose Charts. Ethereum, Solana, Cardano – wer behält den Überblick?',
   },
 ];
 
 const solutions = [
   {
     icon: Brain,
-    title: 'KI trifft rationale Entscheidungen',
-    description: 'Keine Emotionen, keine Panik, keine Gier. Nur datenbasierte Präzision.',
+    title: 'KI tradet Bitcoin ohne Emotionen',
+    description: 'Keine Panik bei Dips, keine FOMO bei Pumps. Nur datenbasierte Krypto-Entscheidungen.',
   },
   {
     icon: Clock,
-    title: '24/7 automatisiertes Trading',
-    description: 'Während du schläfst, arbeitet die KI für dich – rund um die Uhr, 365 Tage.',
+    title: '24/7 Krypto-Trading automatisiert',
+    description: 'Die KI tradet Bitcoin, Ethereum & Altcoins rund um die Uhr – auch wenn du schläfst.',
   },
   {
     icon: Sparkles,
-    title: 'Komplexität wird Einfachheit',
-    description: 'Du lehnst dich zurück. Die KI analysiert, entscheidet und handelt für dich.',
+    title: 'Professionelle Marktanalyse',
+    description: 'Die KI analysiert den gesamten Krypto-Markt und findet die besten Trading-Chancen.',
   },
 ];
 
@@ -50,11 +50,11 @@ export function ProblemSolutionSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Trading ist stressig.{' '}
+            Krypto-Trading ist stressig.{' '}
             <span className="text-primary">War</span> es zumindest.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Die meisten Trader verlieren – nicht wegen schlechter Strategien, 
+            Die meisten Krypto-Trader verlieren – nicht wegen schlechter Strategien, 
             sondern wegen menschlicher Schwächen.
           </p>
         </div>
@@ -95,7 +95,7 @@ export function ProblemSolutionSection() {
         <div ref={solutionRef}>
           <div className="text-center mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold">
-              Die Lösung: <span className="text-primary">Künstliche Intelligenz</span>
+              Die Lösung: <span className="text-primary">KI-gestütztes Krypto-Trading</span>
             </h3>
           </div>
 
