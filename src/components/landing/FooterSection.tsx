@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Lock, Zap, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { ArrowRight, Shield, Lock, Zap, Bot } from 'lucide-react';
 
 const REGISTER_URL = '#register';
 
@@ -100,21 +100,16 @@ export function FooterSection() {
               </ul>
             </div>
 
-            {/* Column 3: Community */}
+            {/* Column 3: Powered by */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Community</h4>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
-                  <Twitter className="w-5 h-5 text-primary" />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
-                  <Linkedin className="w-5 h-5 text-primary" />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
-                  <Instagram className="w-5 h-5 text-primary" />
+              <h4 className="font-semibold text-foreground mb-4">Powered by</h4>
+              <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                <Bot className="w-8 h-8 text-primary" />
+                <div>
+                  <p className="text-sm font-medium text-foreground">CryptoAI Engine</p>
+                  <p className="text-xs text-muted-foreground">v3.2 Neural Network</p>
                 </div>
               </div>
-              <p className="text-xs text-muted-foreground mt-4">Folge uns für Updates</p>
             </div>
 
             {/* Column 4: Legal */}
