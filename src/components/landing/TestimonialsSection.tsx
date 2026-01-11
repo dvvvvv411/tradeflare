@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [
     name: "Markus Hoffmann",
     role: "Neueinsteiger",
     text: "Nach nur 3 Wochen mit dem KI-Trading-Bot habe ich bereits 920€ Gewinn erzielt. Als absoluter Anfänger hätte ich das nie für möglich gehalten. Die Aktivierungsgebühr von 200€ hat sich innerhalb der ersten Woche amortisiert.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 2,
@@ -114,7 +114,7 @@ export const TestimonialsSection = () => {
                 <StarRating />
               </div>
               
-              <blockquote className="text-lg md:text-xl leading-relaxed text-foreground/90">
+              <blockquote className="bg-muted/50 border border-border/50 rounded-xl p-6 text-lg md:text-xl leading-relaxed text-foreground/90">
                 "{featured.text}"
               </blockquote>
             </div>
