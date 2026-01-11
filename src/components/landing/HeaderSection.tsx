@@ -44,7 +44,7 @@ export function HeaderSection() {
           {/* Linke Spalte: Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <img src={tradeFlareLogo} alt="TradeFlare" className="h-16 md:h-20 w-auto" />
+              <img src={tradeFlareLogo} alt="TradeFlare" className="h-12 md:h-16 w-auto" />
             </a>
           </div>
 
