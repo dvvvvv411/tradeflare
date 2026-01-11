@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, LogIn } from 'lucide-react';
+import tradeFlareLogo from '@/assets/tradeflare-logo.png';
 
 const REGISTER_URL = '#register';
 
@@ -42,8 +43,8 @@ export function HeaderSection() {
         <div className="grid lg:grid-cols-3 items-center h-16 md:h-20">
           {/* Linke Spalte: Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-xl md:text-2xl font-bold text-foreground">
-              CryptoAI
+            <a href="/" className="flex items-center">
+              <img src={tradeFlareLogo} alt="TradeFlare" className="h-8 md:h-10 w-auto" />
             </a>
           </div>
 
