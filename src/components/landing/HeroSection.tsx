@@ -104,10 +104,15 @@ export function HeroSection() {
       {/* Improved Grid */}
       <div className="absolute inset-0 bg-grid-hero opacity-50" />
       
-      {/* Animated Glow Orbs */}
-      <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-float-slow" />
-      <div className="absolute bottom-20 right-10 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[80px] animate-float-slower" />
+      {/* Animated Glow Orbs - Float + Pulse */}
+      <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-float-pulse" />
+      <div className="absolute bottom-20 right-10 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[80px] animate-float-pulse-slow" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
+      
+      {/* Diagonal Shimmer Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer-bg" />
+      </div>
       
       {/* Bottom Fade - Clear section separation */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
@@ -122,7 +127,7 @@ export function HeroSection() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <span className="font-light lg:block">KI-gestütztes Trading</span>{' '}
+              <span className="text-gradient-animated font-light lg:block">KI-gestütztes Trading</span>{' '}
               <span className="text-primary lg:block">für digitale Assets</span>
             </h1>
 
@@ -144,7 +149,7 @@ export function HeroSection() {
             >
               <Button 
                 size="lg" 
-                className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-medium rounded-xl"
+                className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-medium rounded-xl animate-button-pulse"
                 onClick={() => window.location.href = REGISTER_URL}
               >
                 <span className="flex items-center gap-2">
