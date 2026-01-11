@@ -77,10 +77,6 @@ export function FooterSection() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Die Zukunft des Krypto-Tradings mit KI-Unterstützung. Maximiere deine Renditen durch unseren fortschrittlichen Algorithmus.
               </p>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <Shield className="w-4 h-4 text-primary" />
-                <span>Made in Germany</span>
-              </div>
             </div>
 
             {/* Column 2: Navigation */}
@@ -101,7 +97,7 @@ export function FooterSection() {
             </div>
 
             {/* Column 3: Powered by */}
-            <div>
+            <div className="space-y-4">
               <h4 className="font-semibold text-foreground mb-4">Powered by</h4>
               <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
                 <Bot className="w-8 h-8 text-primary" />
@@ -109,6 +105,12 @@ export function FooterSection() {
                   <p className="text-sm font-medium text-foreground">CryptoAI Engine</p>
                   <p className="text-xs text-muted-foreground">v3.2 Neural Network</p>
                 </div>
+              </div>
+              
+              {/* Made in Germany Badge */}
+              <div className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-gradient-to-r from-muted/50 via-destructive/5 to-yellow-500/10 border border-border/50">
+                <span className="text-base">🇩🇪</span>
+                <span className="text-xs font-medium text-muted-foreground">Made in Germany</span>
               </div>
             </div>
 
