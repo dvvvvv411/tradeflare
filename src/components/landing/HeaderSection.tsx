@@ -56,7 +56,7 @@ export function HeaderSection() {
                 className="px-4 py-2.5 text-base font-semibold text-foreground 
                            hover:bg-primary/10 hover:text-primary
                            border border-transparent hover:border-primary/20
-                           rounded-full transition-all duration-200"
+                           rounded-full transition-all duration-200 whitespace-nowrap"
               >
                 {item.label}
               </button>
