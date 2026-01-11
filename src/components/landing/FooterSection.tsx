@@ -36,7 +36,22 @@ export function FooterSection() {
   return (
     <>
       {/* Final CTA */}
-      <section id="kontakt" className="section-padding relative overflow-hidden bg-gradient-to-b from-primary/3 via-primary/5 to-background">
+      <section id="kontakt" className="section-padding relative overflow-hidden">
+        {/* Enhanced Background - wie Hero Section */}
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-gradient-hero-enhanced" />
+        <div className="absolute inset-0 bg-grid-hero opacity-50" />
+        
+        {/* Animierte Glow Orbs */}
+        <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] animate-float-pulse" />
+        <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-primary/8 rounded-full blur-[80px] animate-float-pulse-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
+        
+        {/* Diagonal Shimmer Effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer-bg" />
+        </div>
+        
         <div className="container-custom relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Bereit, dein Trading zu <span className="text-primary">automatisieren</span>?
