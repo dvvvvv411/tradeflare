@@ -54,8 +54,8 @@ export function HeaderSection() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="px-4 py-2 text-sm font-semibold text-foreground 
-                           bg-muted/50 hover:bg-primary/10 hover:text-primary
+                className="px-4 py-2.5 text-base font-semibold text-foreground 
+                           hover:bg-primary/10 hover:text-primary
                            border border-transparent hover:border-primary/20
                            rounded-full transition-all duration-200"
               >
