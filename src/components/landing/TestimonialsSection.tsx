@@ -41,10 +41,15 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-const StarRating = () => (
-  <div className="flex gap-1">
+const StarRating = ({ size = "default" }: { size?: "default" | "small" }) => (
+  <div className="flex gap-0.5">
     {[...Array(5)].map((_, i) => (
-      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+      <Star 
+        key={i} 
+        className={`fill-amber-400 text-amber-400 ${
+          size === "small" ? "w-4 h-4" : "w-5 h-5"
+        }`} 
+      />
     ))}
   </div>
 );
@@ -98,19 +103,18 @@ export const TestimonialsSection = () => {
             </div>
             
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-6">
-                <img 
-                  src={featured.avatar} 
-                  alt={featured.name}
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary/20 object-cover"
-                />
-                <div>
-                  <h4 className="font-bold text-lg md:text-xl text-foreground">{featured.name}</h4>
-                  <p className="text-muted-foreground text-sm">{featured.role}</p>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <img 
+                    src={featured.avatar} 
+                    alt={featured.name}
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary/20 object-cover"
+                  />
+                  <div>
+                    <h4 className="font-bold text-lg md:text-xl text-foreground">{featured.name}</h4>
+                    <p className="text-muted-foreground text-sm">{featured.role}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="mb-6">
                 <StarRating />
               </div>
               
@@ -135,20 +139,19 @@ export const TestimonialsSection = () => {
                 onClick={() => setSelectedIndex(originalIndex)}
                 className="bg-card hover:bg-card/95 border border-border hover:border-primary/40 rounded-xl p-6 text-left transition-all duration-300 hover-lift shadow-lg group"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <img 
-                    src={testimonial.avatar} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full border border-border group-hover:border-primary/30 object-cover transition-colors"
-                  />
-                  <div>
-                    <h5 className="font-semibold text-sm text-foreground">{testimonial.name}</h5>
-                    <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full border border-border group-hover:border-primary/30 object-cover transition-colors"
+                    />
+                    <div>
+                      <h5 className="font-semibold text-sm text-foreground">{testimonial.name}</h5>
+                      <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="mb-3">
-                  <StarRating />
+                  <StarRating size="small" />
                 </div>
                 
                 <p className="text-sm text-muted-foreground line-clamp-3">
