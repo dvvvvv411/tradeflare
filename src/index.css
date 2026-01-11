@@ -346,7 +346,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: text-shimmer 4s ease-in-out infinite;
+  animation: text-shimmer 6s ease-in-out infinite;
 }
 
 /* Pulsing CTA Button - Soft breathing */
