@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Lock, Zap } from 'lucide-react';
+import { ArrowRight, Shield, Lock, Zap, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const REGISTER_URL = '#register';
 
@@ -16,19 +16,12 @@ const navigationLinks = [
   { label: 'Exklusiver Zugang', href: '#exklusiver-zugang' },
 ];
 
-const productLinks = [
-  { label: "So funktioniert's", href: '#' },
-  { label: 'Preise', href: '#' },
-  { label: 'Partnerprogramm', href: '#' },
-  { label: 'API Dokumentation', href: '#' },
-];
 
 const legalLinks = [
   { label: 'Impressum', href: '/impressum' },
   { label: 'Datenschutzerklärung', href: '/datenschutz' },
   { label: 'AGB', href: '/agb' },
   { label: 'Widerrufsbelehrung', href: '/widerruf' },
-  { label: 'Risikohinweis', href: '/risikohinweis' },
 ];
 
 export function FooterSection() {
@@ -82,7 +75,7 @@ export function FooterSection() {
             <div className="space-y-4">
               <div className="text-2xl font-bold text-foreground">CryptoAI</div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                KI-gestütztes Trading für digitale Assets. Automatisiert, sicher und profitabel – rund um die Uhr.
+                Die Zukunft des Krypto-Tradings mit KI-Unterstützung. Maximiere deine Renditen durch unseren fortschrittlichen Algorithmus.
               </p>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Shield className="w-4 h-4 text-primary" />
@@ -107,21 +100,21 @@ export function FooterSection() {
               </ul>
             </div>
 
-            {/* Column 3: Product */}
+            {/* Column 3: Community */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Produkt</h4>
-              <ul className="space-y-3">
-                {productLinks.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <h4 className="font-semibold text-foreground mb-4">Community</h4>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+                  <Twitter className="w-5 h-5 text-primary" />
+                </div>
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+                  <Linkedin className="w-5 h-5 text-primary" />
+                </div>
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+                  <Instagram className="w-5 h-5 text-primary" />
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-4">Folge uns für Updates</p>
             </div>
 
             {/* Column 4: Legal */}
@@ -144,12 +137,9 @@ export function FooterSection() {
 
           {/* Bottom Section */}
           <div className="mt-12 pt-8 border-t border-border">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div className="flex justify-center items-center">
               <p className="text-sm text-muted-foreground">
                 © {new Date().getFullYear()} CryptoAI. Alle Rechte vorbehalten.
-              </p>
-              <p className="text-xs text-muted-foreground max-w-2xl text-center lg:text-right leading-relaxed">
-                <strong>Risikohinweis:</strong> Der Handel mit Kryptowährungen birgt erhebliche Risiken und kann zum Totalverlust des eingesetzten Kapitals führen. Vergangene Ergebnisse sind keine Garantie für zukünftige Gewinne. Handeln Sie nur mit Kapital, dessen Verlust Sie verkraften können.
               </p>
             </div>
           </div>
