@@ -106,12 +106,6 @@ export function FooterSection() {
                   <p className="text-xs text-muted-foreground">v3.2 Neural Network</p>
                 </div>
               </div>
-              
-              {/* Made in Germany Badge */}
-              <div className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-gradient-to-r from-muted/50 via-destructive/5 to-yellow-500/10 border border-border/50">
-                <span className="text-base">🇩🇪</span>
-                <span className="text-xs font-medium text-muted-foreground">Made in Germany</span>
-              </div>
             </div>
 
             {/* Column 4: Legal */}
