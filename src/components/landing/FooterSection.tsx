@@ -3,6 +3,35 @@ import { ArrowRight, Shield, Lock, Zap } from 'lucide-react';
 
 const REGISTER_URL = '#register';
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.querySelector(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+const navigationLinks = [
+  { label: 'Funktionen', href: '#funktionen' },
+  { label: 'Vorteile', href: '#vorteile' },
+  { label: 'Erfahrungen', href: '#testimonials' },
+  { label: 'Kontakt', href: '#kontakt' },
+];
+
+const productLinks = [
+  { label: "So funktioniert's", href: '#' },
+  { label: 'Preise', href: '#' },
+  { label: 'Partnerprogramm', href: '#' },
+  { label: 'API Dokumentation', href: '#' },
+];
+
+const legalLinks = [
+  { label: 'Impressum', href: '/impressum' },
+  { label: 'Datenschutzerklärung', href: '/datenschutz' },
+  { label: 'AGB', href: '/agb' },
+  { label: 'Widerrufsbelehrung', href: '/widerruf' },
+  { label: 'Risikohinweis', href: '/risikohinweis' },
+];
+
 export function FooterSection() {
   return (
     <>
@@ -32,16 +61,85 @@ export function FooterSection() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border bg-background">
+      <footer className="py-16 bg-muted/50 border-t border-border">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-2xl font-bold text-foreground">CryptoAI</div>
-            <div className="flex gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">Impressum</a>
-              <a href="#" className="hover:text-foreground transition-colors">Datenschutz</a>
-              <a href="#" className="hover:text-foreground transition-colors">AGB</a>
+          {/* Main Footer Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+            
+            {/* Column 1: Logo & Description */}
+            <div className="space-y-4">
+              <div className="text-2xl font-bold text-foreground">CryptoAI</div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                KI-gestütztes Trading für digitale Assets. Automatisiert, sicher und profitabel – rund um die Uhr.
+              </p>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <Shield className="w-4 h-4 text-primary" />
+                <span>Made in Germany</span>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground">© 2026 CryptoAI. Alle Rechte vorbehalten.</p>
+
+            {/* Column 2: Navigation */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
+              <ul className="space-y-3">
+                {navigationLinks.map((link) => (
+                  <li key={link.label}>
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3: Product */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">Produkt</h4>
+              <ul className="space-y-3">
+                {productLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 4: Legal */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-4">Rechtliches</h4>
+              <ul className="space-y-3">
+                {legalLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+              <p className="text-sm text-muted-foreground">
+                © {new Date().getFullYear()} CryptoAI. Alle Rechte vorbehalten.
+              </p>
+              <p className="text-xs text-muted-foreground max-w-2xl text-center lg:text-right leading-relaxed">
+                <strong>Risikohinweis:</strong> Der Handel mit Kryptowährungen birgt erhebliche Risiken und kann zum Totalverlust des eingesetzten Kapitals führen. Vergangene Ergebnisse sind keine Garantie für zukünftige Gewinne. Handeln Sie nur mit Kapital, dessen Verlust Sie verkraften können.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
