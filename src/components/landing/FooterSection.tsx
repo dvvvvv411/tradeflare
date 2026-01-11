@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Zap } from 'lucide-react';
-import { PartnersSection } from './PartnersSection';
 
 const REGISTER_URL = '#register';
 
@@ -32,9 +31,6 @@ export function FooterSection() {
           </div>
         </div>
       </section>
-
-      {/* Partners Section */}
-      <PartnersSection />
 
       {/* Footer */}
       <footer className="py-12 border-t border-border">
