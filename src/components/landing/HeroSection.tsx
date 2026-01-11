@@ -340,7 +340,7 @@ export function HeroSection() {
 
         {/* Partner Logos */}
         <div 
-          className={`mt-24 md:mt-32 pt-12 border-t border-border/30 transition-all duration-700 delay-700 ${
+          className={`mt-16 pt-12 border-t border-border/30 transition-all duration-700 delay-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
