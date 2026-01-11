@@ -170,19 +170,19 @@ export function HeroSection() {
 
             {/* Mini Stats - Visual Pill Badges */}
             <div 
-              className={`flex flex-wrap gap-3 justify-center lg:justify-start pt-4 transition-all duration-700 delay-300 ${
+              className={`flex flex-wrap justify-center lg:justify-between w-full max-w-[580px] pt-4 transition-all duration-700 delay-300 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="flex items-center gap-2 bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2.5 rounded-full text-sm font-medium backdrop-blur-sm">
                 <TrendingUp className="w-4 h-4" />
                 <span>92% profitable Trades</span>
               </div>
-              <div className="flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <div className="flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2.5 rounded-full text-sm font-medium backdrop-blur-sm">
                 <Clock className="w-4 h-4" />
                 <span>Handelt 24/7</span>
               </div>
-              <div className="flex items-center gap-2 bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm font-medium">
+              <div className="flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2.5 rounded-full text-sm font-medium backdrop-blur-sm">
                 <Wallet className="w-4 h-4" />
                 <span>Ab €200 starten</span>
               </div>
