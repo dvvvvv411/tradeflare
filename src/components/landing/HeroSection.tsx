@@ -102,7 +102,7 @@ export function HeroSection() {
       <div className="absolute bottom-40 right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
 
       <div ref={ref} className="container-custom relative z-10 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-12 items-center">
           {/* Left Content - Professional & Confident */}
           <div className="text-center lg:text-left space-y-8">
             {/* Main Headline - Dominant */}
