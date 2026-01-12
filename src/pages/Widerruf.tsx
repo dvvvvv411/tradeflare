@@ -1,57 +1,62 @@
 import { LegalPageLayout } from '@/components/landing/LegalPageLayout';
-import { Clock, AlertTriangle, Send } from 'lucide-react';
 
 export default function Widerruf() {
   return (
     <LegalPageLayout title="Widerrufsbelehrung" lastUpdated="Januar 2025">
       <h2>Widerrufsrecht</h2>
-      
-      <div className="legal-highlight">
-        <div className="flex items-start gap-3">
-          <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="font-semibold text-foreground mb-1">14 Tage Widerrufsrecht</p>
-            <p>Sie haben das Recht, binnen <strong>vierzehn Tagen</strong> ohne Angabe von Gründen diesen Vertrag zu widerrufen.</p>
-          </div>
-        </div>
-      </div>
-      
-      <p>Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.</p>
-      
-      <div className="legal-box">
-        <p><strong>MJJ Invest GmbH</strong></p>
-        <p>Kästrich 4, 55116 Mainz</p>
-        <p>E-Mail: <a href="mailto:info@tradeflare.de">info@tradeflare.de</a></p>
-      </div>
+      <p>
+        Sie haben das Recht, binnen <strong>vierzehn Tagen</strong> ohne Angabe von Gründen diesen Vertrag zu widerrufen.
+      </p>
+      <p>
+        Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.
+      </p>
+      <p>
+        Um Ihr Widerrufsrecht auszuüben, müssen Sie uns mittels einer eindeutigen Erklärung 
+        (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag 
+        zu widerrufen, informieren:
+      </p>
+      <p>
+        <strong>MJJ Invest GmbH</strong><br />
+        Kästrich 4, 55116 Mainz<br />
+        E-Mail: <a href="mailto:info@tradeflare.de">info@tradeflare.de</a>
+      </p>
 
       <h2>Folgen des Widerrufs</h2>
       <p>
-        Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen unverzüglich und spätestens 
-        binnen vierzehn Tagen zurückzuzahlen.
+        Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, 
+        unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung 
+        über Ihren Widerruf dieses Vertrags bei uns eingegangen ist.
       </p>
 
       <h2>Besondere Hinweise</h2>
-      <div className="legal-highlight" style={{ borderLeftColor: 'hsl(var(--destructive))' }}>
-        <div className="flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="font-semibold text-foreground mb-1">Vorzeitiges Erlöschen</p>
-            <p>Das Widerrufsrecht erlischt bei vollständiger Vertragserfüllung nach ausdrücklicher Zustimmung.</p>
-          </div>
-        </div>
-      </div>
+      <p>
+        Das Widerrufsrecht erlischt vorzeitig, wenn der Anbieter die Dienstleistung vollständig erbracht hat 
+        und mit der Ausführung der Dienstleistung erst begonnen hat, nachdem der Nutzer seine ausdrückliche 
+        Zustimmung gegeben hat und gleichzeitig seine Kenntnis davon bestätigt hat, dass er sein Widerrufsrecht 
+        bei vollständiger Vertragserfüllung verliert.
+      </p>
 
       <h2>Muster-Widerrufsformular</h2>
-      <div className="legal-box">
-        <div className="flex items-start gap-3 mb-4">
-          <Send className="w-5 h-5 text-primary" />
-          <p className="font-semibold text-foreground">Widerrufsformular</p>
-        </div>
-        <p>An: MJJ Invest GmbH, Kästrich 4, 55116 Mainz</p>
-        <p className="mt-2">Hiermit widerrufe(n) ich/wir (*) den Vertrag über:</p>
-        <p className="border-b border-border py-2 italic text-muted-foreground">_____________</p>
-        <p className="text-xs text-muted-foreground mt-4">(*) Unzutreffendes streichen</p>
-      </div>
+      <p>
+        Wenn Sie den Vertrag widerrufen wollen, können Sie das folgende Formular verwenden:
+      </p>
+      <p>
+        An: MJJ Invest GmbH, Kästrich 4, 55116 Mainz, E-Mail: info@tradeflare.de
+      </p>
+      <p>
+        Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über die Erbringung 
+        der folgenden Dienstleistung: _____________
+      </p>
+      <p>
+        Bestellt am (*) / erhalten am (*): _____________<br />
+        Name des/der Verbraucher(s): _____________<br />
+        Anschrift des/der Verbraucher(s): _____________<br />
+        Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier): _____________<br />
+        Datum: _____________
+      </p>
+      <p>
+        (*) Unzutreffendes streichen.
+      </p>
     </LegalPageLayout>
   );
 }

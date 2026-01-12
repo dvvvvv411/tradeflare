@@ -1,23 +1,19 @@
 import { LegalPageLayout } from '@/components/landing/LegalPageLayout';
-import { Shield, Lock, UserCheck, Cookie } from 'lucide-react';
 
 export default function Datenschutz() {
   return (
     <LegalPageLayout title="Datenschutzerklärung" lastUpdated="Januar 2025">
       <h2>Verantwortlicher</h2>
-      <div className="legal-highlight">
-        <div className="flex items-start gap-3">
-          <Shield className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <div>
-            <p><strong>MJJ Invest GmbH</strong></p>
-            <p>Kästrich 4, 55116 Mainz</p>
-            <p>E-Mail: <a href="mailto:info@tradeflare.de">info@tradeflare.de</a></p>
-          </div>
-        </div>
-      </div>
+      <p>
+        <strong>MJJ Invest GmbH</strong><br />
+        Kästrich 4, 55116 Mainz<br />
+        E-Mail: <a href="mailto:info@tradeflare.de">info@tradeflare.de</a>
+      </p>
 
       <h2>Datenerfassung</h2>
-      <p>Beim Besuch unserer Website werden automatisch technische Informationen erfasst:</p>
+      <p>
+        Beim Besuch unserer Website werden automatisch technische Informationen erfasst:
+      </p>
       <ul>
         <li>IP-Adresse, Browsertyp und -version</li>
         <li>Betriebssystem, Referrer URL</li>
@@ -25,34 +21,22 @@ export default function Datenschutz() {
       </ul>
 
       <h2>Ihre Rechte</h2>
-      <div className="legal-highlight">
-        <div className="flex items-start gap-3">
-          <UserCheck className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="font-semibold text-foreground mb-2">Sie haben das Recht auf:</p>
-            <ul>
-              <li><strong>Auskunft</strong>, <strong>Berichtigung</strong>, <strong>Löschung</strong></li>
-              <li><strong>Einschränkung</strong>, <strong>Datenübertragbarkeit</strong>, <strong>Widerspruch</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <p>
+        Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, 
+        Datenübertragbarkeit und Widerspruch bezüglich Ihrer personenbezogenen Daten.
+      </p>
 
       <h2>Cookies</h2>
-      <div className="legal-box">
-        <div className="flex items-start gap-3">
-          <Cookie className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <p>Unsere Website verwendet Cookies für eine nutzerfreundliche Erfahrung.</p>
-        </div>
-      </div>
+      <p>
+        Unsere Website verwendet Cookies für eine nutzerfreundliche Erfahrung. Sie können die 
+        Speicherung von Cookies in Ihren Browsereinstellungen einschränken oder deaktivieren.
+      </p>
 
       <h2>SSL-Verschlüsselung</h2>
-      <div className="legal-box">
-        <div className="flex items-start gap-3">
-          <Lock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <p>Diese Seite nutzt SSL/TLS-Verschlüsselung zum Schutz Ihrer Daten.</p>
-        </div>
-      </div>
+      <p>
+        Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte 
+        eine SSL- bzw. TLS-Verschlüsselung.
+      </p>
     </LegalPageLayout>
   );
 }

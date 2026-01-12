@@ -1,30 +1,21 @@
 import { LegalPageLayout } from '@/components/landing/LegalPageLayout';
-import { Building2, Mail, Globe, FileCheck } from 'lucide-react';
 
 export default function Impressum() {
   return (
     <LegalPageLayout title="Impressum" lastUpdated="Januar 2025">
-      {/* Company Info Card */}
-      <div className="legal-highlight">
-        <div className="flex items-start gap-3">
-          <Building2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="font-semibold text-foreground">MJJ Invest GmbH</p>
-            <p>Kästrich 4<br />55116 Mainz<br />Deutschland</p>
-          </div>
-        </div>
-      </div>
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <p>
+        <strong>MJJ Invest GmbH</strong><br />
+        Kästrich 4<br />
+        55116 Mainz<br />
+        Deutschland
+      </p>
 
       <h2>Handelsregister</h2>
-      <div className="legal-box">
-        <div className="flex items-start gap-3">
-          <FileCheck className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <div>
-            <p><strong>Registergericht:</strong> Amtsgericht Mainz</p>
-            <p><strong>Registernummer:</strong> HRB 48297</p>
-          </div>
-        </div>
-      </div>
+      <p>
+        <strong>Registergericht:</strong> Amtsgericht Mainz<br />
+        <strong>Registernummer:</strong> HRB 48297
+      </p>
 
       <h2>Vertreten durch</h2>
       <p>
@@ -32,26 +23,16 @@ export default function Impressum() {
       </p>
 
       <h2>Kontakt</h2>
-      <div className="legal-box">
-        <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-            <a href="mailto:info@tradeflare.de">info@tradeflare.de</a>
-          </div>
-          <div className="flex items-center gap-3">
-            <Globe className="w-4 h-4 text-primary flex-shrink-0" />
-            <a href="https://tradeflare.de/" target="_blank" rel="noopener noreferrer">https://tradeflare.de/</a>
-          </div>
-        </div>
-      </div>
+      <p>
+        E-Mail: <a href="mailto:info@tradeflare.de">info@tradeflare.de</a><br />
+        Website: <a href="https://tradeflare.de/" target="_blank" rel="noopener noreferrer">https://tradeflare.de/</a>
+      </p>
 
       <h2>Umsatzsteuer-Identifikationsnummer</h2>
       <p>
-        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+        <strong>DE258920448</strong>
       </p>
-      <div className="legal-highlight">
-        <p className="font-mono text-foreground font-semibold">DE258920448</p>
-      </div>
 
       <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
       <p>
