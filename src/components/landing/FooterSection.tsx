@@ -1,15 +1,9 @@
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Zap, Bot } from 'lucide-react';
 import tradeFlareLogo from '@/assets/tradeflare-logo.png';
 
 const REGISTER_URL = '#register';
-
-const scrollToSection = (sectionId: string) => {
-  const element = document.querySelector(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 
 const navigationLinks = [
   { label: 'Trading Bot', href: '#trading-bot' },
@@ -26,6 +20,33 @@ const legalLinks = [
 ];
 
 export function FooterSection() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       {/* Final CTA */}
@@ -74,7 +95,9 @@ export function FooterSection() {
             
             {/* Column 1: Logo & Description */}
             <div className="space-y-4">
-              <img src={tradeFlareLogo} alt="TradeFlare" className="h-[4.5rem] w-auto" />
+              <button onClick={handleLogoClick}>
+                <img src={tradeFlareLogo} alt="TradeFlare" className="h-[4.5rem] w-auto" />
+              </button>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Die Zukunft des Krypto-Tradings mit KI-Unterstützung. Maximiere deine Renditen durch unseren fortschrittlichen Algorithmus.
               </p>
