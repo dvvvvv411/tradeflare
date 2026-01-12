@@ -1,5 +1,4 @@
 import { LegalPageLayout } from '@/components/landing/LegalPageLayout';
-import { AlertTriangle, Building2 } from 'lucide-react';
 
 export default function AGB() {
   return (
@@ -7,25 +6,9 @@ export default function AGB() {
       
       <h2>§ 1 Geltungsbereich</h2>
       <p>
-        (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge, die zwischen
-      </p>
-      
-      <div className="legal-highlight">
-        <div className="flex items-start gap-3">
-          <Building2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-          <div>
-            <p><strong>MJJ Invest GmbH</strong></p>
-            <p>Kästrich 4, 55116 Mainz</p>
-            <p>Geschäftsführer: Malte Johannes Janzarik</p>
-            <p>E-Mail: <a href="mailto:info@tradeflare.de">info@tradeflare.de</a></p>
-          </div>
-        </div>
-      </div>
-      
-      <p>
-        (nachfolgend "Anbieter") und dem Kunden (nachfolgend "Nutzer") über die Website 
-        <a href="https://tradeflare.de/" target="_blank" rel="noopener noreferrer"> https://tradeflare.de/</a> 
-        geschlossen werden.
+        (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge, die zwischen 
+        der MJJ Invest GmbH, Kästrich 4, 55116 Mainz (nachfolgend "Anbieter") und dem Kunden (nachfolgend "Nutzer") 
+        über die Website <a href="https://tradeflare.de/" target="_blank" rel="noopener noreferrer">https://tradeflare.de/</a> geschlossen werden.
       </p>
       <p>
         (2) Abweichende Bedingungen des Nutzers werden nicht anerkannt, es sei denn, der Anbieter stimmt 
@@ -91,22 +74,11 @@ export default function AGB() {
       </p>
 
       <h2>§ 6 Risikohinweise</h2>
-      
-      {/* Important Risk Warning */}
-      <div className="legal-highlight" style={{ borderLeftColor: 'hsl(var(--destructive))' }}>
-        <div className="flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="font-semibold text-foreground mb-2">WICHTIGER HINWEIS</p>
-            <p>
-              Der Handel mit Kryptowährungen ist mit erheblichen Risiken verbunden. Der Wert von 
-              Kryptowährungen kann stark schwanken und der Nutzer kann sein gesamtes eingesetztes 
-              Kapital verlieren.
-            </p>
-          </div>
-        </div>
-      </div>
-      
+      <p>
+        <strong>(1) Der Handel mit Kryptowährungen ist mit erheblichen Risiken verbunden. Der Wert von 
+        Kryptowährungen kann stark schwanken und der Nutzer kann sein gesamtes eingesetztes 
+        Kapital verlieren.</strong>
+      </p>
       <p>
         (2) Die Nutzung des Trading-Bots garantiert keine Gewinne. Vergangene Performance ist kein 
         Indikator für zukünftige Ergebnisse.
