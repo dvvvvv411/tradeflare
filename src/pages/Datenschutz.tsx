@@ -22,8 +22,8 @@ export default function Datenschutz() {
 
       <h2>Ihre Rechte</h2>
       <p>
-        Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, 
-        Datenübertragbarkeit und Widerspruch bezüglich Ihrer personenbezogenen Daten.
+        Sie haben das Recht auf <strong>Auskunft</strong>, <strong>Berichtigung</strong>, <strong>Löschung</strong>, 
+        <strong>Einschränkung der Verarbeitung</strong>, <strong>Datenübertragbarkeit</strong> und <strong>Widerspruch</strong> bezüglich Ihrer personenbezogenen Daten.
       </p>
 
       <h2>Cookies</h2>
@@ -35,7 +35,7 @@ export default function Datenschutz() {
       <h2>SSL-Verschlüsselung</h2>
       <p>
         Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte 
-        eine SSL- bzw. TLS-Verschlüsselung.
+        eine <strong>SSL- bzw. TLS-Verschlüsselung</strong>.
       </p>
     </LegalPageLayout>
   );

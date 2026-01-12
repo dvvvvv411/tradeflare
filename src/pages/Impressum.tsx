@@ -13,13 +13,13 @@ export default function Impressum() {
 
       <h2>Handelsregister</h2>
       <p>
-        <strong>Registergericht:</strong> Amtsgericht Mainz<br />
-        <strong>Registernummer:</strong> HRB 48297
+        Registergericht: <strong>Amtsgericht Mainz</strong><br />
+        Registernummer: <strong>HRB 48297</strong>
       </p>
 
       <h2>Vertreten durch</h2>
       <p>
-        <strong>Geschäftsführer:</strong> Malte Johannes Janzarik
+        Geschäftsführer: <strong>Malte Johannes Janzarik</strong>
       </p>
 
       <h2>Kontakt</h2>
@@ -36,7 +36,7 @@ export default function Impressum() {
 
       <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
       <p>
-        Malte Johannes Janzarik<br />
+        <strong>Malte Johannes Janzarik</strong><br />
         Kästrich 4<br />
         55116 Mainz
       </p>
