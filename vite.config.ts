@@ -10,12 +10,16 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     cors: true,
     strictPort: false,
+    allowedHosts: true,
     hmr: {
       host: 'localhost',
     },
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+  },
+  preview: {
+    allowedHosts: true,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
