@@ -42,6 +42,7 @@ export function HeroSection() {
   const [trades, setTrades] = useState(initialTrades);
   const [animatingTrade, setAnimatingTrade] = useState<number | null>(null);
   const [cryptoPrices, setCryptoPrices] = useState<CryptoPrices>(fallbackPrices);
+  const [pulsingLogoIndex, setPulsingLogoIndex] = useState<number | null>(null);
   
   const accountBalance = useCountUp({ end: 12847, duration: 2500, enabled: isVisible });
   const todayProfit = useCountUp({ end: 4.2, duration: 2000, enabled: isVisible, decimals: 1 });
@@ -92,6 +93,24 @@ export function HeroSection() {
     }, 4000);
 
     return () => clearInterval(interval);
+  }, [isVisible]);
+
+  // Logo pulse animation - one by one from left to right
+  useEffect(() => {
+    if (!isVisible) return;
+    
+    let currentIndex = 0;
+    const logoCount = 6;
+    
+    const pulseInterval = setInterval(() => {
+      setPulsingLogoIndex(currentIndex);
+      
+      setTimeout(() => setPulsingLogoIndex(null), 300);
+      
+      currentIndex = (currentIndex + 1) % logoCount;
+    }, 600);
+    
+    return () => clearInterval(pulseInterval);
   }, [isVisible]);
 
   return (
@@ -157,14 +176,12 @@ export function HeroSection() {
                 </span>
               </Button>
               
-              <Button 
-                size="lg" 
-                variant="ghost"
-                className="text-muted-foreground hover:text-foreground px-8 py-6 text-base font-medium"
-                onClick={() => document.getElementById('funktionen')?.scrollIntoView({ behavior: 'smooth' })}
+              <button
+                className="px-8 py-3 text-base font-semibold text-foreground hover:bg-primary/10 hover:text-primary border border-transparent hover:border-primary/20 rounded-full transition-all duration-200"
+                onClick={() => document.getElementById('erfahrungen')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                So funktioniert's
-              </Button>
+                Bewertungen
+              </button>
             </div>
 
             {/* Mini Stats - Visual Pill Badges */}
@@ -201,10 +218,14 @@ export function HeroSection() {
                   { name: 'KuCoin', logo: '/partners/kucoin.png' },
                   { name: 'Bitfinex', logo: '/partners/bitfinex.png' },
                   { name: 'OKX', logo: '/partners/okx.png' },
-                ].map((partner) => (
+                ].map((partner, index) => (
                   <div
                     key={partner.name}
-                    className="flex-1 bg-white/80 dark:bg-card/80 backdrop-blur-sm border border-border/30 rounded-xl py-3 shadow-sm flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/30"
+                    className={`flex-1 bg-white/80 dark:bg-card/80 backdrop-blur-sm border border-border/30 rounded-xl py-3 shadow-sm flex items-center justify-center transition-all duration-300 ${
+                      pulsingLogoIndex === index 
+                        ? 'scale-110' 
+                        : 'scale-100 hover:scale-105 hover:shadow-md hover:border-primary/30'
+                    }`}
                   >
                     <img
                       src={partner.logo}
