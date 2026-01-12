@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, LogIn } from 'lucide-react';
 import tradeFlareLogo from '@/assets/tradeflare-logo.png';
@@ -14,6 +15,8 @@ const navItems = [
 export function HeaderSection() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,10 +28,27 @@ export function HeaderSection() {
 
   const scrollToSection = (href: string) => {
     setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -43,9 +63,9 @@ export function HeaderSection() {
         <div className="grid lg:grid-cols-3 items-center h-16 md:h-20">
           {/* Linke Spalte: Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <button onClick={handleLogoClick} className="flex items-center">
               <img src={tradeFlareLogo} alt="TradeFlare" className="h-12 md:h-16 w-auto" />
-            </a>
+            </button>
           </div>
 
           {/* Mittlere Spalte: Navigation ZENTRIERT */}
