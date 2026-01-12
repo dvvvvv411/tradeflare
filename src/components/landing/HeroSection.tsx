@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, TrendingUp, ArrowUpRight, Clock, Wallet } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 
-const REGISTER_URL = '#register';
+const REGISTER_URL = 'https://web.tradeflare.de/auth';
 
 // CoinGecko icon URLs
 const CRYPTO_ICONS = {

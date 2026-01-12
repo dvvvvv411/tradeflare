@@ -89,7 +89,7 @@ export function UrgencyCtaSection() {
                 className="w-full group bg-primary hover:bg-primary/90 text-primary-foreground py-7 text-xl font-bold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 animate-button-pulse mt-auto"
                 asChild
               >
-                <a href="#register">
+                <a href="https://web.tradeflare.de/auth">
                   Jetzt deinen Platz sichern
                   <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, LogIn } from 'lucide-react';
 import tradeFlareLogo from '@/assets/tradeflare-logo.png';
 
-const REGISTER_URL = '#register';
+const REGISTER_URL = 'https://web.tradeflare.de/auth';
 
 const navItems = [
   { label: 'Trading Bot', href: '#trading-bot' },
