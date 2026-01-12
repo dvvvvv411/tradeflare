@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Zap } from 'lucide-react';
 
-const REGISTER_URL = '#register';
+const REGISTER_URL = 'https://web.tradeflare.de/auth';
 
 export function CtaSection() {
   return (
